@@ -50,7 +50,7 @@
         </div>
 
         <div class="flex items-center gap-1 md:gap-4">
-            <a href="./test" class="px-2 md:px-3 py-2 text-xs md:text-sm font-medium text-zinc-600 dark:text-zinc-400">
+            <a href="./archive" class="px-2 md:px-3 py-2 text-xs md:text-sm font-medium text-zinc-600 dark:text-zinc-400">
                 Archive
             </a>
             <a href="#about-section" class="px-2 md:px-3 py-2 text-xs md:text-sm font-medium text-zinc-600 dark:text-zinc-400">
@@ -104,10 +104,10 @@
             const query = this.value;
             if (query.trim() !== "") {
                 // ส่งคำค้นหาไปหน้า library.html (เปลี่ยนชื่อไฟล์ตามหน้าแสดง Card ของคุณ)
-                window.location.href = `test.html?search=${encodeURIComponent(query)}`;
+                window.location.href = `archive.html?search=${encodeURIComponent(query)}`;
             } else {
                 // ถ้าไม่ได้พิมพ์อะไรเลย ให้ไปหน้า library เฉพาะตัวเปล่าๆ
-                window.location.href = 'test.html';
+                window.location.href = 'archive.html';
             }
         }
     });
@@ -202,7 +202,7 @@
 <p class="text-lg text-secondary mb-10 font-body leading-relaxed">
                 เราเชื่อว่า "ข้อมูลที่ถูกต้อง คือจุดเริ่มต้นของการเปลี่ยนแปลง" การรวบรวมงานวิจัยและบทความวิเคราะห์ปัญหาการศึกษาไทยในโปรเจคนี้ มีวัตถุประสงค์เพื่อเป็นฐานข้อมูลให้เหล่านักการศึกษา นโยบาย และผู้ที่สนใจ ได้เข้ามาเรียนรู้ความผิดพลาดในอดีต และค้นหาโมเดลความสำเร็จใหม่ๆ เพื่อร่วมกันผลักดันการปฏิรูปให้เกิดขึ้นจริง
              </p>
-             <a href="test.html">
+             <a href="archive.html">
 <button class="bg-primary text-on-primary px-8 py-3 rounded-md font-semibold font-body hover:bg-primary-container transition-colors duration-300 shadow-[0px_12px_32px_rgba(175,16,26,0.2)]">
                  Explore the Archive
              </button>
