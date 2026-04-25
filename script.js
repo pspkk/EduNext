@@ -426,6 +426,10 @@ function displayContent() {
         listElement.innerHTML = `<p class="text-center py-20 text-zinc-400">No results found.</p>`;
         document.getElementById('pagination').innerHTML = "";
         return;
+      
+      if (window.innerWidth < 768) {
+        document.getElementById('content-start').scrollIntoView({ behavior: 'smooth' });
+    }
     }
 
 // วนลูปสร้าง Card (ดีไซน์ที่เน้นความสม่ำเสมอ)
@@ -656,4 +660,5 @@ document.addEventListener('DOMContentLoaded', () => {
     else if (document.getElementById('card-list')) {
         displayContent();
     }
+  
 });
