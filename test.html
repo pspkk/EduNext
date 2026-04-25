@@ -18,22 +18,32 @@
 <body class="">
 
 <!-- TopNavBar -->
-<nav class="fixed top-0 w-full z-50 bg-slate-50/80 dark:bg-zinc-950/80 backdrop-blur-xl bg-zinc-100 dark:bg-zinc-900 shadow-sm dark:shadow-none font-['Manrope'] tracking-tight">
-<div class="flex justify-between items-center w-full px-8 py-4 max-w-[1920px] mx-auto">
-<div class="text-2xl font-bold tracking-tighter text-zinc-900 dark:text-zinc-50">
-        <h1><a href="./index.html">EduNext</a></h1>
-            </div>
-<div class="hidden md:flex items-center space-x-8">
-<a class="text-zinc-600 dark:text-zinc-400 font-medium hover:text-red-700 dark:hover:text-red-400 transition-colors duration-300" href="./test.html">Search</a>
-<a class="text-zinc-600 dark:text-zinc-400 font-medium hover:text-red-700 dark:hover:text-red-400 transition-colors duration-300" href="#">Subjects</a>
-<a class="text-zinc-600 dark:text-zinc-400 font-medium hover:text-red-700 dark:hover:text-red-400 transition-colors duration-300" href="#">Archive</a>
-</div>
-<div class="flex items-center space-x-4">
-<button class="text-zinc-600 dark:text-zinc-400 hover:text-red-700 dark:hover:text-red-400 transition-colors duration-300">
-<span class="material-symbols-outlined" data-icon="account_circle">account_circle</span>
-</button>
-</div>
-</div>
+<nav class="fixed top-0 w-full z-50 bg-white/70 dark:bg-zinc-950/70 backdrop-blur-md border-b border-zinc-200/50 dark:border-zinc-800/50 font-['Manrope']">
+    <div class="flex justify-between items-center w-full px-6 py-4 max-w-7xl mx-auto">
+        
+        <div class="text-xl md:text-2xl font-bold tracking-tighter text-zinc-900 dark:text-zinc-50">
+            <a href="./index.html" class="flex items-center gap-3 group">
+                <img src="img/logo2.png" class="h-8 md:h-9 w-auto transition-transform duration-300 group-hover:scale-110" alt="Logo">
+                <span class="bg-clip-text text-transparent bg-gradient-to-r from-zinc-900 to-zinc-500 dark:from-white dark:to-zinc-400">
+                    EduForword
+                </span>
+            </a>
+        </div>
+
+        <div class="flex items-center gap-1 md:gap-4">
+            <a href="./test.html" class="px-3 py-2 text-sm font-medium text-zinc-600 dark:text-zinc-400 hover:text-red-600 dark:hover:text-red-400 transition-all duration-300 rounded-lg hover:bg-zinc-100 dark:hover:bg-zinc-800">
+                Archive
+            </a>
+            <a href="#" class="px-3 py-2 text-sm font-medium text-zinc-600 dark:text-zinc-400 hover:text-red-600 dark:hover:text-red-400 transition-all duration-300 rounded-lg hover:bg-zinc-100 dark:hover:bg-zinc-800">
+                About us
+            </a>
+            
+            <a href="#" class="ml-2 px-4 py-2 text-sm font-bold text-white bg-red-600 hover:bg-red-700 transition-all duration-300 rounded-full shadow-lg shadow-red-500/20 dark:shadow-none">
+                Contact us
+            </a>
+        </div>
+        
+    </div>
 </nav>
 
     <div class="max-w-[1400px] mx-auto p-8" style="padding-top: 100px;">
