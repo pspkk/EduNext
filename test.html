@@ -1,137 +1,98 @@
 <!DOCTYPE html>
-
-<html class="light" lang="en"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>The Digital Curator - Home</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script src="https://cdn.tailwindcss.com"></script>
-<script src="script.js"></script>
+<html class="light" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>EduForword - Archive</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
     
     <style>
-  html {
-    scroll-behavior: smooth;
-  }
-  body { font-family: 'Inter', sans-serif; }
-  h1, h2, h3, h4, h5, h6, .font-headline { font-family: 'Manrope', sans-serif; }
-</style>
-    
-    <style>
-        body { font-family: 'Inter', sans-serif; }
-        h1, h2, h3, h4, h5, h6, .font-headline { font-family: 'Manrope', sans-serif; }
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Inter', sans-serif; overflow-x: hidden; }
+        h1, h2, h3, .font-headline { font-family: 'Manrope', sans-serif; }
+        /* ซ่อน Scrollbar สำหรับส่วนที่ยาวเกิน */
+        .no-scrollbar::-webkit-scrollbar { display: none; }
     </style>
 </head>
-<body class="">
 
-<!-- TopNavBar -->
-<nav class="fixed top-0 w-full z-50 bg-white/70 dark:bg-zinc-950/70 backdrop-blur-md border-b border-zinc-200/50 dark:border-zinc-800/50 font-['Manrope']">
-    <div class="flex justify-between items-center w-full px-4 md:px-6 py-4 max-w-7xl mx-auto">
-        
-        <div class="flex-shrink-0 text-lg md:text-2xl font-bold tracking-tighter text-zinc-900 dark:text-zinc-50">
-            <a href="./index.html" class="flex items-center gap-2 md:gap-3 group">
-                <img src="img/logo2.png" class="h-6 md:h-9 w-auto" alt="Logo">
-                <span class="truncate">EduForword</span>
+<body class="bg-white text-zinc-900 antialiased">
+
+<nav class="fixed top-0 w-full z-[100] bg-white/80 backdrop-blur-md border-b border-zinc-200">
+    <div class="flex justify-between items-center px-4 py-3 md:px-6 md:py-4 max-w-7xl mx-auto">
+        <div class="flex-shrink-0 font-bold text-xl md:text-2xl tracking-tighter">
+            <a href="./index.html" class="flex items-center gap-2">
+                <img src="img/logo2.png" class="h-7 md:h-9 w-auto" alt="Logo">
+                <span>EduForword</span>
             </a>
         </div>
-
-        <div class="flex items-center gap-1 md:gap-4">
-            <a href="./test.html" class="px-2 md:px-3 py-2 text-xs md:text-sm font-medium text-zinc-600 dark:text-zinc-400">
-                Archive
-            </a>
-            <a href="./index.html#about-section" class="px-2 md:px-3 py-2 text-xs md:text-sm font-medium text-zinc-600 dark:text-zinc-400">
-                    About Us
-            </a>
-            <a href="#" class="ml-1 px-3 py-1.5 md:px-4 md:py-2 text-xs md:text-sm font-bold text-white bg-red-600 rounded-full">
-                Contact
-            </a>
+        <div class="flex items-center gap-2 md:gap-4 text-sm font-medium">
+            <a href="./test.html" class="px-2 py-1 text-red-600">Archive</a>
+            <a href="./index.html#about-section" class="px-2 py-1 text-zinc-600">About</a>
+            <a href="#" class="px-4 py-2 bg-red-600 text-white rounded-full text-xs font-bold">Contact</a>
         </div>
-        
     </div>
 </nav>
 
-    <div class="max-w-[1400px] mx-auto p-8" style="padding-top: 100px;">
-    <div class="flex flex-col md:flex-row gap-8">
+<div class="max-w-7xl mx-auto px-4 md:px-6 pt-24 md:pt-32 pb-12">
+    
+    <div class="flex flex-col md:flex-row gap-6 md:gap-10">
         
-        <div class="max-w-[1400px] mx-auto p-8" style="padding-top: 100px;">
-    <div class="flex flex-col md:flex-row gap-8">
-        
-        <aside class="w-full md:w-1/4 flex flex-col gap-6 bg-zinc-50 p-6 rounded-xl h-auto md:h-fit md:sticky top-24 border border-zinc-200">
-            
-            <div class="flex justify-between items-center">
-                <h2 class="font-bold text-lg border-b-2 border-red-600 pb-1">Filters</h2>
-                <button onclick="document.getElementById('filter-content').classList.toggle('hidden')" 
-                        class="md:hidden flex items-center gap-2 bg-zinc-200 px-3 py-1.5 rounded-lg text-sm font-bold">
-                    <span class="material-symbols-outlined text-sm">filter_list</span>
-                    ปรับแต่ง
-                </button>
-            </div>
-            
-            <div id="filter-content" class="hidden md:flex flex-col gap-6 transition-all duration-300">
-                
-                <div>
-                    <label class="block text-xs font-bold mb-2 uppercase text-zinc-500">Search</label>
-                    <input type="text" id="search-input" placeholder="ค้นหาหัวข้อ..." 
-                           class="w-full p-2 border border-zinc-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-600/20 focus:border-red-600">
+        <aside class="w-full md:w-1/4">
+            <div class="bg-zinc-50 border border-zinc-200 rounded-2xl p-5 md:sticky md:top-28">
+                <div class="flex justify-between items-center mb-4 md:mb-6">
+                    <h2 class="font-extrabold text-lg tracking-tight">Filters</h2>
+                    <button onclick="document.getElementById('filter-inner').classList.toggle('hidden')" 
+                            class="md:hidden flex items-center gap-1 bg-white border border-zinc-300 px-3 py-1.5 rounded-lg text-xs font-bold">
+                        <span class="material-symbols-outlined text-sm">tune</span>
+                        ตัวกรอง
+                    </button>
                 </div>
 
-                <div>
-                    <label class="block text-xs font-bold mb-2 uppercase text-zinc-500">Year</label>
-                    <select id="year-filter" class="w-full p-2 border border-zinc-300 rounded-md focus:border-red-600">
-                        <option value="all">All Years</option>
-                        <option value="2026">2026</option>
-                        <option value="2025">2025</option>
-                        <option value="2024">2024</option>
-                        <option value="2023">2023</option>
-                        <option value="2022">2022</option>
-                        <option value="2021">2021</option>
-                        <option value="2020">2020</option>
-                    </select>
-                </div>
+                <div id="filter-inner" class="hidden md:flex flex-col gap-5">
+                    <div>
+                        <label class="block text-[10px] font-black uppercase text-zinc-400 mb-2 tracking-widest">Search</label>
+                        <input type="text" id="search-input" placeholder="Title..." class="w-full p-2.5 bg-white border border-zinc-300 rounded-xl text-sm focus:ring-2 focus:ring-red-600/10 focus:border-red-600 outline-none transition-all">
+                    </div>
+                    
+                    <div>
+                        <label class="block text-[10px] font-black uppercase text-zinc-400 mb-2 tracking-widest">Year</label>
+                        <select id="year-filter" class="w-full p-2.5 bg-white border border-zinc-300 rounded-xl text-sm outline-none cursor-pointer">
+                            <option value="all">All Years</option>
+                            <option value="2026">2026</option>
+                            <option value="2025">2025</option>
+                        </select>
+                    </div>
 
-                <div>
-                    <label class="block text-xs font-bold mb-2 uppercase text-zinc-500">Type</label>
-                    <select id="type-filter" class="w-full p-2 border border-zinc-300 rounded-md focus:border-red-600">
-                        <option value="all">All Types</option>
-                        <option value="Article">Article</option>
-                        <option value="Book">Book</option>
-                        <option value="Podcast">Podcast</option>
-                        <option value="Video">Video</option>
-                    </select>
-                </div>
-
-                <div>
-                    <label class="block text-xs font-bold mb-2 uppercase text-zinc-500">Category</label>
-                    <select id="category-filter" class="w-full p-2 border border-zinc-300 rounded-md focus:border-red-600">
-                        <option value="all">All Category</option>
-                        <option value="history">History</option>
-                        <option value="education policy">Education policy</option>
-                        <option value="educational reform">Educational reform</option>
-                        <option value="educational problems">Educational problems</option>
-                        <option value="educational equality">Educational equality</option>
-                    </select>
+                    <div>
+                        <label class="block text-[10px] font-black uppercase text-zinc-400 mb-2 tracking-widest">Category</label>
+                        <select id="category-filter" class="w-full p-2.5 bg-white border border-zinc-300 rounded-xl text-sm outline-none cursor-pointer">
+                            <option value="all">All Categories</option>
+                            <option value="history">History</option>
+                            <option value="policy">Education Policy</option>
+                        </select>
+                    </div>
                 </div>
             </div>
         </aside>
 
         <main id="content-start" class="w-full md:w-3/4 scroll-mt-28">
-            <div id="card-list" class="flex flex-col gap-6">
+            <div class="mb-6 flex justify-between items-end">
+                <h3 class="text-zinc-400 text-sm font-medium">Showing results...</h3>
+            </div>
+
+            <div id="card-list" class="grid grid-cols-1 gap-4 md:gap-6">
                 </div>
 
-            <div id="pagination" class="flex justify-center gap-2 mt-12 mb-20"></div>
+            <div id="pagination" class="flex justify-center items-center gap-2 mt-12 pb-10">
+                </div>
         </main>
 
     </div>
 </div>
 
-        <main id="content-start" class="w-full md:w-3/4 scroll-mt-24">
-            <div id="card-list" class="flex flex-col gap-6"></div>
-            <div id="pagination" class="flex justify-center gap-2 mt-12"></div>
-        </main>
-
-    </div>
-</div>
+<script src="script.js"></script>
 </body>
 </html>
