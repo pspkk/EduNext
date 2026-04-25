@@ -55,55 +55,76 @@
     <div class="max-w-[1400px] mx-auto p-8" style="padding-top: 100px;">
     <div class="flex flex-col md:flex-row gap-8">
         
-        <aside class="w-full md:w-1/4 flex flex-col gap-6 bg-zinc-50 p-6 rounded-xl h-auto md:h-fit md:sticky top-24">
-            <h2 class="font-bold text-lg border-b pb-2">Filters</h2>
+        <div class="max-w-[1400px] mx-auto p-8" style="padding-top: 100px;">
+    <div class="flex flex-col md:flex-row gap-8">
+        
+        <aside class="w-full md:w-1/4 flex flex-col gap-6 bg-zinc-50 p-6 rounded-xl h-auto md:h-fit md:sticky top-24 border border-zinc-200">
             
-            <div>
-                <label class="block text-xs font-bold mb-2 uppercase text-zinc-500">Search</label>
-                <input type="text" id="search-input" placeholder="Title..." 
-                       class="w-full p-2 border border-zinc-300 rounded-md focus:outline-[#af101a]">
+            <div class="flex justify-between items-center">
+                <h2 class="font-bold text-lg border-b-2 border-red-600 pb-1">Filters</h2>
+                <button onclick="document.getElementById('filter-content').classList.toggle('hidden')" 
+                        class="md:hidden flex items-center gap-2 bg-zinc-200 px-3 py-1.5 rounded-lg text-sm font-bold">
+                    <span class="material-symbols-outlined text-sm">filter_list</span>
+                    ปรับแต่ง
+                </button>
             </div>
+            
+            <div id="filter-content" class="hidden md:flex flex-col gap-6 transition-all duration-300">
+                
+                <div>
+                    <label class="block text-xs font-bold mb-2 uppercase text-zinc-500">Search</label>
+                    <input type="text" id="search-input" placeholder="ค้นหาหัวข้อ..." 
+                           class="w-full p-2 border border-zinc-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-600/20 focus:border-red-600">
+                </div>
 
-            <div>
-                <label class="block text-xs font-bold mb-2 uppercase text-zinc-500">Year</label>
-                <select id="year-filter" class="w-full p-2 border border-zinc-300 rounded-md">
-                    <option value="all">All Years</option>
-                    <option value="2026">2026</option>
-                    <option value="2025">2025</option>
-                    <option value="2024">2024</option>
-                    <option value="2023">2023</option>
-                    <option value="2022">2022</option>
-                    <option value="2021">2021</option>
-                    <option value="2020">2020</option>
-                    <option value="2019">2019</option>
-                    <option value="2018">2018</option>
-                </select>
-            </div>
+                <div>
+                    <label class="block text-xs font-bold mb-2 uppercase text-zinc-500">Year</label>
+                    <select id="year-filter" class="w-full p-2 border border-zinc-300 rounded-md focus:border-red-600">
+                        <option value="all">All Years</option>
+                        <option value="2026">2026</option>
+                        <option value="2025">2025</option>
+                        <option value="2024">2024</option>
+                        <option value="2023">2023</option>
+                        <option value="2022">2022</option>
+                        <option value="2021">2021</option>
+                        <option value="2020">2020</option>
+                    </select>
+                </div>
 
-            <div>
-                <label class="block text-xs font-bold mb-2 uppercase text-zinc-500">Type</label>
-                <select id="type-filter" class="w-full p-2 border border-zinc-300 rounded-md">
-                    <option value="all">All Types</option>
-                    <option value="Article">Article</option>
-                    <option value="Book">Book</option>
-                    <option value="Podcast">Podcast</option>
-                    <option value="Music">Music</option>
-                    <option value="Video">Video</option>
-                </select>
-            </div>
-            <div>
-                <label class="block text-xs font-bold mb-2 uppercase text-zinc-500">Category</label>
-                <select id="category-filter" class="w-full p-2 border border-zinc-300 rounded-md">
-                    <option value="all"> All Category</option>
-                    <option value="history">History</option>
-                    <option value="education policy">Education policy</option>
-                    <option value="educational reform">Educational reform</option>
-                    <option value="educational problems">Educational problems</option>
-                    <option value="educational equality">Educational equality</option>
-                    <option value="others">Others</option>
-                </select>
+                <div>
+                    <label class="block text-xs font-bold mb-2 uppercase text-zinc-500">Type</label>
+                    <select id="type-filter" class="w-full p-2 border border-zinc-300 rounded-md focus:border-red-600">
+                        <option value="all">All Types</option>
+                        <option value="Article">Article</option>
+                        <option value="Book">Book</option>
+                        <option value="Podcast">Podcast</option>
+                        <option value="Video">Video</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label class="block text-xs font-bold mb-2 uppercase text-zinc-500">Category</label>
+                    <select id="category-filter" class="w-full p-2 border border-zinc-300 rounded-md focus:border-red-600">
+                        <option value="all">All Category</option>
+                        <option value="history">History</option>
+                        <option value="education policy">Education policy</option>
+                        <option value="educational reform">Educational reform</option>
+                        <option value="educational problems">Educational problems</option>
+                        <option value="educational equality">Educational equality</option>
+                    </select>
+                </div>
             </div>
         </aside>
+
+        <main id="content-start" class="w-full md:w-3/4 scroll-mt-28">
+            <div id="card-list" class="flex flex-col gap-6">
+                </div>
+
+            <div id="pagination" class="flex justify-center gap-2 mt-12 mb-20"></div>
+        </main>
+
+    </div>
+</div>
 
         <main id="content-start" class="w-full md:w-3/4 scroll-mt-24">
             <div id="card-list" class="flex flex-col gap-6"></div>
