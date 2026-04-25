@@ -585,7 +585,7 @@ function clearFilters() {
     document.getElementById('year-filter').value = "all";
     document.getElementById('type-filter').value = "all";
     document.getElementById('category-filter').value = "all";
-
+    filterData();
     // 3. รีเซ็ตตัวแปรที่ใช้เก็บค่า Filter ใน Logic (ถ้ามี)
     // สมมติว่าในสคริปต์คุณมีตัวแปรชื่อ filters หรืออะไรทำนองนี้
     // แต่ถ้าคุณดึงค่าจาก element โดยตรงตอน Render ก็ข้ามไปได้เลยครับ
@@ -594,13 +594,13 @@ function clearFilters() {
     currentPage = 1;
 
     // 5. สั่งประมวลผลและแสดงผลใหม่ (ชื่อฟังก์ชันอาจจะเป็น displayData หรือ renderCards ตามที่คุณตั้งไว้)
-    // ในที่นี้ผมอ้างอิงจากฟังก์ชันที่คุณส่งมาตอนแรกคือ displayContent();
     if (typeof displayContent === "function") {
         displayContent(); 
     }
 
     // 6. เลื่อนหน้าจอขึ้นไปบนสุด (Smooth Scroll)
     window.scrollTo({ top: 0, behavior: 'smooth' });
+  
 }
 
 // --- ส่วนการจัดการหน้า Home (Live Search Preview) ---
