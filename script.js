@@ -621,7 +621,7 @@ function initHomeSearch() {
     homeSearch.addEventListener('keypress', (e) => {
         if (e.key === 'Enter') {
             const query = homeSearch.value;
-            window.location.href = `test.html?search=${encodeURIComponent(query)}`;
+            window.location.href = `archive.html?search=${encodeURIComponent(query)}`;
         }
     });
 
@@ -637,7 +637,7 @@ function initHomeSearch() {
 function goToLibrary() {
     const homeSearch = document.getElementById('home-search');
     if (homeSearch) {
-        window.location.href = `test.html?search=${encodeURIComponent(homeSearch.value)}`;
+        window.location.href = `archive.html?search=${encodeURIComponent(homeSearch.value)}`;
     }
 }
 
@@ -672,7 +672,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
     // ฟังก์ชันสำหรับ Card ในหน้า Home
 function filterByCategory(catName) {
-    window.location.href = `test.html?category=${encodeURIComponent(catName)}`;
+    window.location.href = `archive.html?category=${encodeURIComponent(catName)}`;
 }
 
 // ปรับปรุงส่วน DOMContentLoaded ในหน้า Library
