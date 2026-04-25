@@ -624,4 +624,31 @@ document.addEventListener('DOMContentLoaded', () => {
     } else if (document.getElementById('card-list')) {
         displayContent(); // แสดงหน้า Library เฉพาะเมื่ออยู่ในหน้านั้น
     }
+  // ปรับปรุงส่วน DOMContentLoaded ในหน้า Library
+document.addEventListener('DOMContentLoaded', () => {
+    // ... ส่วนผูก Event Listeners เดิม (Search, Year, Type, Category) ...
+    
+    const urlParams = new URLSearchParams(window.location.search);
+    const searchQuery = urlParams.get('search');
+    const categoryQuery = urlParams.get('category'); // เพิ่มการอ่านค่า category
+
+    if (searchQuery) {
+        const searchInput = document.getElementById('search-input');
+        if (searchInput) {
+            searchInput.value = decodeURIComponent(searchQuery);
+            filterData();
+        }
+    } 
+    // เพิ่มเงื่อนไขนี้เข้าไป
+    else if (categoryQuery) {
+        const categoryFilter = document.getElementById('category-filter');
+        if (categoryFilter) {
+            categoryFilter.value = decodeURIComponent(categoryQuery).toLowerCase();
+            filterData();
+        }
+    } 
+    else if (document.getElementById('card-list')) {
+        displayContent();
+    }
+});
 });
