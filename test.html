@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>The Digital Curator - Home</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="script.js"></script>
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3, h4, h5, h6, .font-headline { font-family: 'Manrope', sans-serif; }
+    </style>
+</head>
+<body class="">
+    <!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-slate-50/80 dark:bg-zinc-950/80 backdrop-blur-xl bg-zinc-100 dark:bg-zinc-900 shadow-sm dark:shadow-none font-['Manrope'] tracking-tight">
+<div class="flex justify-between items-center w-full px-8 py-4 max-w-[1920px] mx-auto">
+<div class="text-2xl font-bold tracking-tighter text-zinc-900 dark:text-zinc-50">
+        <h1><a href="./index.html">The Digital Curator</a></h1>
+            </div>
+<div class="hidden md:flex items-center space-x-8">
+<a class="text-red-700 dark:text-red-500 font-bold border-l-4 border-red-700 pl-2 md:border-l-0 md:border-b-2 md:pb-1 hover:text-red-700 dark:hover:text-red-400 transition-colors duration-300" href="./test.html">Discovery</a>
+<a class="text-zinc-600 dark:text-zinc-400 font-medium hover:text-red-700 dark:hover:text-red-400 transition-colors duration-300" href="#">Subjects</a>
+<a class="text-zinc-600 dark:text-zinc-400 font-medium hover:text-red-700 dark:hover:text-red-400 transition-colors duration-300" href="./details.html">Archive</a>
+<a class="text-zinc-600 dark:text-zinc-400 font-medium hover:text-red-700 dark:hover:text-red-400 transition-colors duration-300" href="#">Institutional Access</a>
+</div>
+<div class="flex items-center space-x-4">
+<button class="text-zinc-600 dark:text-zinc-400 hover:text-red-700 dark:hover:text-red-400 transition-colors duration-300">
+<span class="material-symbols-outlined" data-icon="account_circle">account_circle</span>
+</button>
+</div>
+</div>
+</nav>
+
+    <div class="max-w-[1400px] mx-auto p-8" style="padding-top: 100px;">
+    <div class="flex flex-col md:flex-row gap-8">
+        
+        <aside class="w-full md:w-1/4 flex flex-col gap-6 bg-zinc-50 p-6 rounded-xl h-fit sticky top-24">
+            <h2 class="font-bold text-lg border-b pb-2">Filters</h2>
+            
+            <div>
+                <label class="block text-xs font-bold mb-2 uppercase text-zinc-500">Search</label>
+                <input type="text" id="search-input" placeholder="Title..." 
+                       class="w-full p-2 border border-zinc-300 rounded-md focus:outline-[#af101a]">
+            </div>
+
+            <div>
+                <label class="block text-xs font-bold mb-2 uppercase text-zinc-500">Year</label>
+                <select id="year-filter" class="w-full p-2 border border-zinc-300 rounded-md">
+                    <option value="all">All Years</option>
+                    <option value="2026">2026</option>
+                    <option value="2025">2025</option>
+                    <option value="2024">2024</option>
+                    <option value="2023">2023</option>
+                    <option value="2022">2022</option>
+                    <option value="2021">2021</option>
+                    <option value="2020">2020</option>
+                    <option value="2019">2019</option>
+                    <option value="2018">2018</option>
+                </select>
+            </div>
+
+            <div>
+                <label class="block text-xs font-bold mb-2 uppercase text-zinc-500">Type</label>
+                <select id="type-filter" class="w-full p-2 border border-zinc-300 rounded-md">
+                    <option value="all">All Types</option>
+                    <option value="Article">Article</option>
+                    <option value="Book">Book</option>
+                    <option value="Podcast">Podcast</option>
+                    <option value="Music">Music</option>
+                    <option value="Video">Video</option>
+                </select>
+            </div>
+            <div>
+                <label class="block text-xs font-bold mb-2 uppercase text-zinc-500">Category</label>
+                <select id="category-filter" class="w-full p-2 border border-zinc-300 rounded-md">
+                    <option value="all"> All Category</option>
+                    <option value="history">History</option>
+                    <option value="education policy">Education policy</option>
+                    <option value="educational reform">Educational reform</option>
+                    <option value="educational problems">Educational problems</option>
+                    <option value="educational equality">Educational equality</option>
+                </select>
+            </div>
+        </aside>
+
+        <main class="w-full md:w-3/4">
+            <div id="card-list" class="flex flex-col gap-6">
+                </div>
+
+            <div id="pagination" class="flex justify-center gap-2 mt-12"></div>
+        </main>
+
+    </div>
+</div>
+</body>
+</html>

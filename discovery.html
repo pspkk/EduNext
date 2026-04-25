@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>The Digital Curator - Search &amp; Discovery Methods</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="script.js"></script>
+
+<style>
+        body { font-family: 'Inter', sans-serif; background-color: theme('colors.background'); color: theme('colors.on-surface'); }
+        h1, h2, h3, h4, h5, h6, .font-headline { font-family: 'Manrope', sans-serif; }
+        .bg-glass { background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(20px); }
+    </style>
+</head>
+<body class="antialiased min-h-screen flex flex-col pt-24">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-slate-50/80 dark:bg-zinc-950/80 backdrop-blur-xl bg-zinc-100 dark:bg-zinc-900 shadow-sm dark:shadow-none font-['Manrope'] tracking-tight">
+<div class="flex justify-between items-center w-full px-8 py-4 max-w-[1920px] mx-auto">
+<div class="text-2xl font-bold tracking-tighter text-zinc-900 dark:text-zinc-50">
+        <h1><a href="./index.html">The Digital Curator</a></h1>
+            </div>
+<div class="hidden md:flex items-center space-x-8">
+<a class="text-red-700 dark:text-red-500 font-bold border-l-4 border-red-700 pl-2 md:border-l-0 md:border-b-2 md:pb-1 hover:text-red-700 dark:hover:text-red-400 transition-colors duration-300" href="./search.html">Discovery</a>
+<a class="text-zinc-600 dark:text-zinc-400 font-medium hover:text-red-700 dark:hover:text-red-400 transition-colors duration-300" href="#">Subjects</a>
+<a class="text-zinc-600 dark:text-zinc-400 font-medium hover:text-red-700 dark:hover:text-red-400 transition-colors duration-300" href="./details.html">Archive</a>
+<a class="text-zinc-600 dark:text-zinc-400 font-medium hover:text-red-700 dark:hover:text-red-400 transition-colors duration-300" href="#">Institutional Access</a>
+</div>
+<div class="flex items-center space-x-4">
+<button class="text-zinc-600 dark:text-zinc-400 hover:text-red-700 dark:hover:text-red-400 transition-colors duration-300">
+<span class="material-symbols-outlined" data-icon="account_circle">account_circle</span>
+</button>
+</div>
+</div>
+</nav>
+<!-- Main Canvas -->
+<main class="flex-grow w-full max-w-[1920px] mx-auto px-4 md:px-12 lg:px-24 py-12">
+<!-- Hero Search Section -->
+<section class="mb-24 flex flex-col items-center justify-center text-center max-w-4xl mx-auto pt-10">
+<h1 class="text-5xl md:text-7xl font-headline font-extrabold tracking-tight text-on-surface mb-6 leading-tight">
+                Search &amp; Discovery
+            </h1>
+<p class="text-lg md:text-xl font-body text-secondary mb-12 max-w-2xl leading-relaxed">
+                Explore our curated monolithic archives. Navigate through precise subject directories or utilize advanced indexing for scholarly research.
+            </p>
+<!-- Academic Search Bar -->
+<div class="w-full relative group">
+<div class="absolute inset-y-0 left-0 pl-6 flex items-center pointer-events-none">
+<span class="material-symbols-outlined text-secondary group-focus-within:text-primary transition-colors">search</span>
+</div>
+<input class="w-full bg-surface-container-lowest border border-outline-variant/30 text-on-surface font-body text-lg py-5 pl-14 pr-6 rounded-DEFAULT shadow-[0px_12px_32px_rgba(26,28,28,0.06)] focus:outline-none focus:ring-0 focus:border-transparent focus:border-b-2 focus:border-b-primary transition-all duration-300 placeholder-secondary/70" placeholder="Search archives, collections, or identifiers..." type="text"/>
+<button class="absolute inset-y-2 right-2 bg-primary hover:bg-primary-container text-on-primary font-body font-medium px-8 py-2 rounded-md transition-colors shadow-sm">
+                    Search
+                </button>
+</div>
+<!-- Quick Filters (Chips) -->
+<div class="flex flex-wrap justify-center gap-3 mt-8">
+<button class="bg-secondary-container text-on-secondary-container font-label text-sm px-5 py-2 rounded-full hover:bg-primary hover:text-on-primary transition-colors">Manuscripts</button>
+<button class="bg-secondary-container text-on-secondary-container font-label text-sm px-5 py-2 rounded-full hover:bg-primary hover:text-on-primary transition-colors">Photography</button>
+<button class="bg-secondary-container text-on-secondary-container font-label text-sm px-5 py-2 rounded-full hover:bg-primary hover:text-on-primary transition-colors">Audio Records</button>
+<button class="bg-secondary-container text-on-secondary-container font-label text-sm px-5 py-2 rounded-full hover:bg-primary hover:text-on-primary transition-colors">Periodicals</button>
+</div>
+</section>
+<!-- Asymmetric Layout Container -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24">
+<!-- Sidebar (Left Gutter) -->
+<aside class="lg:col-span-3">
+<div class="sticky top-32 bg-surface-container-low p-8 rounded-lg">
+<h3 class="font-headline text-lg font-bold text-on-surface mb-6 uppercase tracking-widest text-sm text-secondary">Discovery Methods</h3>
+<ul class="space-y-4">
+<li class="relative">
+<div class="absolute -left-8 top-0 bottom-0 w-1 bg-primary rounded-r"></div>
+<a class="block font-body text-primary font-medium pl-2" href="#">Subject Directories</a>
+</li>
+<li>
+<a class="block font-body text-secondary hover:text-primary transition-colors pl-2" href="#">Alphabetical Index</a>
+</li>
+<li>
+<a class="block font-body text-secondary hover:text-primary transition-colors pl-2" href="#">Timeline View</a>
+</li>
+<li>
+<a class="block font-body text-secondary hover:text-primary transition-colors pl-2" href="#">Geographic Maps</a>
+</li>
+<li>
+<a class="block font-body text-secondary hover:text-primary transition-colors pl-2" href="#">Curator Highlights</a>
+</li>
+</ul>
+</div>
+</aside>
+<!-- Main Content Area -->
+<div class="lg:col-span-9 space-y-24">
+<!-- Subject Directories (Bento Grid) -->
+<section>
+<div class="flex items-end justify-between mb-12">
+<div>
+<h2 class="text-3xl font-headline font-extrabold text-on-surface mb-2">Subject Directories</h2>
+<p class="font-body text-secondary max-w-xl">Browse curated collections organized by core academic disciplines and thematic areas.</p>
+</div>
+<a class="hidden sm:flex items-center gap-2 font-headline text-sm font-bold text-primary hover:text-primary-container transition-colors uppercase tracking-wider" href="#">
+                            View All Subjects <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- Bento Item 1 (Large) -->
+<div class="md:col-span-2 lg:col-span-2 bg-surface hover:bg-surface-container-low border border-outline-variant/20 p-8 min-h-[300px] flex flex-col justify-end relative group transition-colors duration-300 rounded-lg overflow-hidden">
+<img alt="" class="absolute inset-0 w-full h-full object-cover opacity-20 group-hover:opacity-30 transition-opacity duration-500 grayscale mix-blend-multiply" data-alt="monochrome abstract architecture showing geometric concrete lines and shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD_jeHZ_aplBzHX_i5m-tTK6f2AUNLnspOEtIFGuPmPajOsKEkt6bjSRt_oQ2EZPjziYod5o_9woEihflQO5WizuJWFFgmEbFZBryVlt7EtFs3sdXH1ycn3NOTI7v48CB-Dpy-k05QsJspSD0oisae_DSpFk96uCF9t8Y5QTQhpauTXxqfiq6lgayVmirKu22-JyBgeISGztkAVS89a9sKUP62g_3MmVNcOG0JT-R-NZ7TR33sohZeEmLx9-3TEii6VRRXwGQoXlCI"/>
+<div class="relative z-10">
+<span class="text-xs font-label text-primary font-bold uppercase tracking-widest mb-3 block">Architecture &amp; Urbanism</span>
+<h3 class="text-2xl font-headline font-bold text-on-surface mb-3 group-hover:text-primary transition-colors">Modernist Structures</h3>
+<p class="text-secondary font-body text-sm mb-6 max-w-md">Comprehensive archives detailing the mid-century architectural movements across major metropolitan centers.</p>
+<span class="material-symbols-outlined text-on-surface opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300">arrow_forward</span>
+</div>
+</div>
+<!-- Bento Item 2 -->
+<div class="bg-surface hover:bg-surface-container-low border border-outline-variant/20 p-8 min-h-[300px] flex flex-col justify-end group transition-colors duration-300 rounded-lg">
+<div class="relative z-10">
+<span class="text-xs font-label text-primary font-bold uppercase tracking-widest mb-3 block">Visual Arts</span>
+<h3 class="text-xl font-headline font-bold text-on-surface mb-3 group-hover:text-primary transition-colors">Abstract Expressionism</h3>
+<p class="text-secondary font-body text-sm mb-6">Letters, sketches, and critiques from the New York School.</p>
+</div>
+</div>
+<!-- Bento Item 3 -->
+<div class="bg-surface hover:bg-surface-container-low border border-outline-variant/20 p-8 min-h-[300px] flex flex-col justify-end group transition-colors duration-300 rounded-lg">
+<div class="relative z-10">
+<span class="text-xs font-label text-primary font-bold uppercase tracking-widest mb-3 block">Literature</span>
+<h3 class="text-xl font-headline font-bold text-on-surface mb-3 group-hover:text-primary transition-colors">Post-War Fiction</h3>
+<p class="text-secondary font-body text-sm mb-6">Original manuscripts and editorial correspondence.</p>
+</div>
+</div>
+<!-- Bento Item 4 (Wide) -->
+<div class="md:col-span-2 lg:col-span-2 bg-surface hover:bg-surface-container-low border border-outline-variant/20 p-8 min-h-[300px] flex flex-col justify-end group transition-colors duration-300 rounded-lg">
+<div class="relative z-10">
+<span class="text-xs font-label text-primary font-bold uppercase tracking-widest mb-3 block">Historical Sciences</span>
+<h3 class="text-2xl font-headline font-bold text-on-surface mb-3 group-hover:text-primary transition-colors">Industrial Revolution Documentation</h3>
+<p class="text-secondary font-body text-sm mb-6 max-w-md">Primary source materials concerning technological advancements and sociological shifts in 19th-century Europe.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- 2.5rem Spacer -->
+<div class="h-10"></div>
+<!-- Alphabetical Index (Minimalist List) -->
+<section>
+<div class="mb-12 border-b border-surface-container-high pb-4">
+<h2 class="text-3xl font-headline font-extrabold text-on-surface mb-2">Alphabetical Index</h2>
+<p class="font-body text-secondary">A precise, A-Z directory of all cataloged entities and significant archival entries.</p>
+</div>
+<!-- Letter Navigation -->
+<div class="flex flex-wrap gap-2 mb-10">
+<a class="w-10 h-10 flex items-center justify-center font-headline font-bold text-lg bg-primary text-on-primary rounded-sm" href="#">A</a>
+<a class="w-10 h-10 flex items-center justify-center font-headline text-secondary hover:bg-surface-container-low hover:text-on-surface rounded-sm transition-colors" href="#">B</a>
+<a class="w-10 h-10 flex items-center justify-center font-headline text-secondary hover:bg-surface-container-low hover:text-on-surface rounded-sm transition-colors" href="#">C</a>
+<a class="w-10 h-10 flex items-center justify-center font-headline text-secondary hover:bg-surface-container-low hover:text-on-surface rounded-sm transition-colors" href="#">D</a>
+<a class="w-10 h-10 flex items-center justify-center font-headline text-secondary hover:bg-surface-container-low hover:text-on-surface rounded-sm transition-colors" href="#">E</a>
+<span class="w-10 h-10 flex items-center justify-center text-surface-dim">...</span>
+<a class="w-10 h-10 flex items-center justify-center font-headline text-secondary hover:bg-surface-container-low hover:text-on-surface rounded-sm transition-colors" href="#">Z</a>
+</div>
+<!-- Index List -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-4">
+<a class="group flex items-center justify-between py-3 border-b border-surface-container-low hover:border-outline-variant/50 transition-colors" href="#">
+<span class="font-body text-on-surface group-hover:text-primary transition-colors">Abstract Expressionism</span>
+<span class="font-label text-xs text-secondary bg-surface-container-low px-2 py-1 rounded">142 items</span>
+</a>
+<a class="group flex items-center justify-between py-3 border-b border-surface-container-low hover:border-outline-variant/50 transition-colors" href="#">
+<span class="font-body text-on-surface group-hover:text-primary transition-colors">Acoustics &amp; Sound Design</span>
+<span class="font-label text-xs text-secondary bg-surface-container-low px-2 py-1 rounded">89 items</span>
+</a>
+<a class="group flex items-center justify-between py-3 border-b border-surface-container-low hover:border-outline-variant/50 transition-colors" href="#">
+<span class="font-body text-on-surface group-hover:text-primary transition-colors">Aerospace Engineering</span>
+<span class="font-label text-xs text-secondary bg-surface-container-low px-2 py-1 rounded">215 items</span>
+</a>
+<a class="group flex items-center justify-between py-3 border-b border-surface-container-low hover:border-outline-variant/50 transition-colors" href="#">
+<span class="font-body text-on-surface group-hover:text-primary transition-colors">African Diaspora Studies</span>
+<span class="font-label text-xs text-secondary bg-surface-container-low px-2 py-1 rounded">430 items</span>
+</a>
+<a class="group flex items-center justify-between py-3 border-b border-surface-container-low hover:border-outline-variant/50 transition-colors" href="#">
+<span class="font-body text-on-surface group-hover:text-primary transition-colors">Agricultural History</span>
+<span class="font-label text-xs text-secondary bg-surface-container-low px-2 py-1 rounded">112 items</span>
+</a>
+<a class="group flex items-center justify-between py-3 border-b border-surface-container-low hover:border-outline-variant/50 transition-colors" href="#">
+<span class="font-body text-on-surface group-hover:text-primary transition-colors">American Literature (19th C.)</span>
+<span class="font-label text-xs text-secondary bg-surface-container-low px-2 py-1 rounded">560 items</span>
+</a>
+<a class="group flex items-center justify-between py-3 border-b border-surface-container-low hover:border-outline-variant/50 transition-colors" href="#">
+<span class="font-body text-on-surface group-hover:text-primary transition-colors">Analytical Chemistry</span>
+<span class="font-label text-xs text-secondary bg-surface-container-low px-2 py-1 rounded">76 items</span>
+</a>
+<a class="group flex items-center justify-between py-3 border-b border-surface-container-low hover:border-outline-variant/50 transition-colors" href="#">
+<span class="font-body text-on-surface group-hover:text-primary transition-colors">Ancient Near East</span>
+<span class="font-label text-xs text-secondary bg-surface-container-low px-2 py-1 rounded">320 items</span>
+</a>
+</div>
+</section>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full mt-20 bg-zinc-100 font-['Inter'] text-sm tracking-wide transition-all duration-200">
+<div class="flex flex-col md:flex-row justify-between items-center px-12 py-10 w-full max-w-[1920px] mx-auto">
+<div class="mb-6 md:mb-0">
+<span class="font-['Manrope'] font-black uppercase tracking-widest text-zinc-400 block mb-2">The Digital Curator</span>
+<p class="text-zinc-500">© 2024 The Digital Curator Archive. All rights reserved.</p>
+</div>
+<div class="flex flex-wrap justify-center gap-6">
+<a class="text-zinc-500 hover:text-zinc-900 underline decoration-red-700 transition-colors duration-200" href="#">Privacy Policy</a>
+<a class="text-zinc-500 hover:text-zinc-900 underline decoration-red-700 transition-colors duration-200" href="#">Terms of Service</a>
+<a class="text-zinc-500 hover:text-zinc-900 underline decoration-red-700 transition-colors duration-200" href="#">Accessibility</a>
+<a class="text-zinc-500 hover:text-zinc-900 underline decoration-red-700 transition-colors duration-200" href="#">Contact Us</a>
+</div>
+</div>
+</footer>
+</body></html>
