@@ -81,55 +81,92 @@
 </script>
 
 </section>
+<!-- Minimal Content Block -->
+<section class="max-w-4xl mx-auto  mb-20">
+<h2 class="text-3xl font-bold mb-6 font-headline tracking-tight text-on-surface text-center">SDG4</h2>
+<p class="text-lg text-secondary mb-10 font-body leading-relaxed class="indent">
+                 <i>&emsp;&emsp;&emsp;&emsp;" คือ กุญแจสำคัญสู่การพัฒนาที่ยั่งยืนด้วยการศึกษาที่มีคุณภาพ
+การศึกษา ไม่ใช่เพียงแค่การอ่านออกเขียนได้ <br>แต่คือรากฐานสำคัญที่ช่วยปลดล็อกศักยภาพของมนุษย์และขับเคลื่อนสังคมไปข้างหน้าเป้าหมายการพัฒนาที่ยั่งยืนข้อที่ 4 <br>หรือ SDG 4 (Quality Education) ของสหประชาชาติ จึงมุ่งเน้นไปที่การ "สร้างหลักประกันว่าทุกคนจะได้รับการศึกษา <br>ที่มีคุณภาพอย่างเท่าเทียมและทั่วถึง และส่งเสริมโอกาสในการเรียนรู้ตลอดชีวิต "
+             <i></p>
+</section>
+
 <!-- Curated Collections Bento Grid -->
 <section class="mb-32">
 <h2 class="text-3xl font-bold mb-12 font-headline tracking-tight">Curated Collections</h2>
 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-<!-- Card 1 -->
-<div class="group relative bg-surface-container-low rounded-xl overflow-hidden aspect-square flex flex-col justify-end p-8 transition-all duration-500 hover:shadow-[0px_12px_32px_rgba(26,28,28,0.06)] hover:-translate-y-2">
-<img alt="Classic Literature" class="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-500 mix-blend-multiply" data-alt="close up of ancient, worn leather bound books stacked neatly, warm soft lighting highlighting the texture of the spines" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA6Nm05qIDd_Hg70BVWr4213c1UFxyRU7F9Vx7qtaMHkUbjTcBi839koKUohLB2AvKxEYdH_BjIkwikFqw-SwDQqucoZLD-1OvfCXep90cooU0hvK7rTreRjJ2Ecw8dZxkckdicetYUYxp7DY20wGvF4QFy93JgBCSsmmo5uuFuSOLGiqWUCuz1em8WOT3p9aEPwONJSJJibZN6siZ0q9BmIL2Od-JqvBZnQeUlqnC8BynlG6BySVR5UaYH2-HRFp37RXsoaExf5b0"/>
-<div class="absolute inset-0 bg-gradient-to-t from-on-surface/90 via-on-surface/40 to-transparent"></div>
-<div class="relative z-10">
-<span class="inline-block px-3 py-1 bg-primary text-on-primary text-xs font-semibold rounded-full mb-3 uppercase tracking-wider">Literature</span>
-<h3 class="text-2xl font-bold text-surface-container-lowest font-headline mb-2">The Classics Revived</h3>
-<p class="text-surface-variant text-sm font-body line-clamp-2">A meticulous restoration of pivotal texts from the 18th century, presented in high fidelity.</p>
+<div onclick="filterByCategory('history')" class="cursor-pointer group relative bg-surface-container-low rounded-xl overflow-hidden aspect-square flex flex-col justify-end p-8 transition-all duration-500 hover:shadow-[0px_12px_32px_rgba(26,28,28,0.06)] hover:-translate-y-2">
+    <img alt="Classic Literature" class="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-500 mix-blend-multiply" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA6Nm05qIDd_Hg70BVWr4213c1UFxyRU7F9Vx7qtaMHkUbjTcBi839koKUohLB2AvKxEYdH_BjIkwikFqw-SwDQqucoZLD-1OvfCXep90cooU0hvK7rTreRjJ2Ecw8dZxkckdicetYUYxp7DY20wGvF4QFy93JgBCSsmmo5uuFuSOLGiqWUCuz1em8WOT3p9aEPwONJSJJibZN6siZ0q9BmIL2Od-JqvBZnQeUlqnC8BynlG6BySVR5UaYH2-HRFp37RXsoaExf5b0"/>
+    <div class="absolute inset-0 bg-gradient-to-t from-on-surface/90 via-on-surface/40 to-transparent"></div>
+    <div class="relative z-10">
+        <span class="inline-block px-3 py-1 bg-primary text-on-primary text-xs font-semibold rounded-full mb-3 uppercase tracking-wider">Literature</span>
+        <h3 class="text-2xl font-bold text-surface-container-lowest font-headline mb-2">History</h3>
+        <p class="text-surface-variant text-sm font-body line-clamp-2">A meticulous restoration of pivotal texts from the 18th century.</p>
+    </div>
 </div>
+
+<div onclick="filterByCategory('education policy')" class="cursor-pointer group relative bg-surface-container-low rounded-xl overflow-hidden aspect-square flex flex-col justify-end p-8 transition-all duration-500 hover:shadow-[0px_12px_32px_rgba(26,28,28,0.06)] hover:-translate-y-2">
+    <div class="absolute inset-0 bg-secondary-container opacity-50 group-hover:opacity-80 transition-opacity duration-500"></div>
+    <div class="relative z-10">
+        <span class="inline-block px-3 py-1 bg-secondary text-on-secondary text-xs font-semibold rounded-full mb-3 uppercase tracking-wider">Architecture</span>
+        <h3 class="text-2xl font-bold text-on-surface font-headline mb-2">Education policy</h3>
+        <p class="text-secondary text-sm font-body line-clamp-2">Exploring movements through original essays and blueprints.</p>
+    </div>
 </div>
-<!-- Card 2 -->
-<div class="group relative bg-surface-container-low rounded-xl overflow-hidden aspect-square flex flex-col justify-end p-8 transition-all duration-500 hover:shadow-[0px_12px_32px_rgba(26,28,28,0.06)] hover:-translate-y-2">
-<div class="absolute inset-0 bg-secondary-container opacity-50 group-hover:opacity-80 transition-opacity duration-500"></div>
-<div class="absolute inset-0 flex items-center justify-center">
-<span class="material-symbols-outlined text-8xl text-primary opacity-20 group-hover:opacity-40 transition-opacity duration-500 group-hover:scale-110" data-icon="architecture">architecture</span>
+
+<div onclick="filterByCategory('educational reform')" class="cursor-pointer group relative bg-surface-container-low rounded-xl overflow-hidden aspect-square flex flex-col justify-end p-8 transition-all duration-500 hover:shadow-[0px_12px_32px_rgba(26,28,28,0.06)] hover:-translate-y-2">
+    <img alt="Science Archives" class="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-500 mix-blend-multiply" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD8g9oi53oE3V-wsLS4xNJSDw-GBZatB2jFpoxmPoUrqK4umfgHtvqmMCCMxynzjzoP-C1QpWNii6lFMVwPck-6aDVdrnZxn2xdDoW8VygYDBuU9R0nTNK28CPUTJlBUQtFJg8OTysiFGFmXnRH28vR49H7eoUlxVTP67O3JSJ49vwQz4obRdsYCZqXvu44bx48uODujfJfTokrn5It1hlD0ExyvaFuVXGe_w738mwP2b8rYmrtCVz3JyVi1pBNNYk2IBCckln_ilU"/>
+    <div class="absolute inset-0 bg-gradient-to-t from-on-surface/90 via-on-surface/40 to-transparent"></div>
+    <div class="relative z-10">
+        <span class="inline-block px-3 py-1 bg-primary text-on-primary text-xs font-semibold rounded-full mb-3 uppercase tracking-wider">Sciences</span>
+        <h3 class="text-2xl font-bold text-surface-container-lowest font-headline mb-2">Educational reform</h3>
+        <p class="text-surface-variant text-sm font-body line-clamp-2">Star charts and observational logs from the pre-digital era.</p>
+    </div>
 </div>
-<div class="relative z-10">
-<span class="inline-block px-3 py-1 bg-secondary text-on-secondary text-xs font-semibold rounded-full mb-3 uppercase tracking-wider">Architecture</span>
-<h3 class="text-2xl font-bold text-on-surface font-headline mb-2">Modernist Manifestos</h3>
-<p class="text-secondary text-sm font-body line-clamp-2">Exploring the brutalist and minimalist movements through original essays and blueprints.</p>
+
+<div onclick="filterByCategory('educational problems')" class="cursor-pointer group relative bg-surface-container-low rounded-xl overflow-hidden aspect-square flex flex-col justify-end p-8 transition-all duration-500 hover:shadow-[0px_12px_32px_rgba(26,28,28,0.06)] hover:-translate-y-2">
+    <img alt="Science Archives" class="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-500 mix-blend-multiply" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD8g9oi53oE3V-wsLS4xNJSDw-GBZatB2jFpoxmPoUrqK4umfgHtvqmMCCMxynzjzoP-C1QpWNii6lFMVwPck-6aDVdrnZxn2xdDoW8VygYDBuU9R0nTNK28CPUTJlBUQtFJg8OTysiFGFmXnRH28vR49H7eoUlxVTP67O3JSJ49vwQz4obRdsYCZqXvu44bx48uODujfJfTokrn5It1hlD0ExyvaFuVXGe_w738mwP2b8rYmrtCVz3JyVi1pBNNYk2IBCckln_ilU"/>
+    <div class="absolute inset-0 bg-gradient-to-t from-on-surface/90 via-on-surface/40 to-transparent"></div>
+    <div class="relative z-10">
+        <span class="inline-block px-3 py-1 bg-primary text-on-primary text-xs font-semibold rounded-full mb-3 uppercase tracking-wider">Sciences</span>
+        <h3 class="text-2xl font-bold text-surface-container-lowest font-headline mb-2">Educational problems</h3>
+        <p class="text-surface-variant text-sm font-body line-clamp-2">Star charts and observational logs from the pre-digital era.</p>
+    </div>
 </div>
+
+<div onclick="filterByCategory('educational equality')" class="cursor-pointer group relative bg-surface-container-low rounded-xl overflow-hidden aspect-square flex flex-col justify-end p-8 transition-all duration-500 hover:shadow-[0px_12px_32px_rgba(26,28,28,0.06)] hover:-translate-y-2">
+    <img alt="Science Archives" class="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-500 mix-blend-multiply" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD8g9oi53oE3V-wsLS4xNJSDw-GBZatB2jFpoxmPoUrqK4umfgHtvqmMCCMxynzjzoP-C1QpWNii6lFMVwPck-6aDVdrnZxn2xdDoW8VygYDBuU9R0nTNK28CPUTJlBUQtFJg8OTysiFGFmXnRH28vR49H7eoUlxVTP67O3JSJ49vwQz4obRdsYCZqXvu44bx48uODujfJfTokrn5It1hlD0ExyvaFuVXGe_w738mwP2b8rYmrtCVz3JyVi1pBNNYk2IBCckln_ilU"/>
+    <div class="absolute inset-0 bg-gradient-to-t from-on-surface/90 via-on-surface/40 to-transparent"></div>
+    <div class="relative z-10">
+        <span class="inline-block px-3 py-1 bg-primary text-on-primary text-xs font-semibold rounded-full mb-3 uppercase tracking-wider">Sciences</span>
+        <h3 class="text-2xl font-bold text-surface-container-lowest font-headline mb-2">Educational equality</h3>
+        <p class="text-surface-variant text-sm font-body line-clamp-2">Star charts and observational logs from the pre-digital era.</p>
+    </div>
 </div>
-<!-- Card 3 -->
-<div class="group relative bg-surface-container-low rounded-xl overflow-hidden aspect-square flex flex-col justify-end p-8 transition-all duration-500 hover:shadow-[0px_12px_32px_rgba(26,28,28,0.06)] hover:-translate-y-2">
-<img alt="Science Archives" class="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-500 mix-blend-multiply" data-alt="abstract macro photography of ink diffusing in water, deep reds and greys, scientific yet artistic aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD8g9oi53oE3V-wsLS4xNJSDw-GBZatB2jFpoxmPoUrqK4umfgHtvqmMCCMxynzjzoP-C1QpWNii6lFMVwPck-6aDVdrnZxn2xdDoW8VygYDBuU9R0nTNK28CPUTJlBUQtFJg8OTysiFGFmXnRH28vR49H7eoUlxVTP67O3JSJ49vwQz4obRdsYCZqXvu44bx48uODujfJfTokrn5It1hlD0ExyvaFuVXGe_w738mwP2b8rYmrtCVz3JyVi1pBNNYk2IBCckln_ilU"/>
-<div class="absolute inset-0 bg-gradient-to-t from-on-surface/90 via-on-surface/40 to-transparent"></div>
-<div class="relative z-10">
-<span class="inline-block px-3 py-1 bg-primary text-on-primary text-xs font-semibold rounded-full mb-3 uppercase tracking-wider">Sciences</span>
-<h3 class="text-2xl font-bold text-surface-container-lowest font-headline mb-2">Early Astronomy</h3>
-<p class="text-surface-variant text-sm font-body line-clamp-2">Star charts and observational logs from the pre-digital era of space exploration.</p>
-</div>
+
+<div onclick="filterByCategory('others')" class="cursor-pointer group relative bg-surface-container-low rounded-xl overflow-hidden aspect-square flex flex-col justify-end p-8 transition-all duration-500 hover:shadow-[0px_12px_32px_rgba(26,28,28,0.06)] hover:-translate-y-2">
+    <img alt="Science Archives" class="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-500 mix-blend-multiply" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD8g9oi53oE3V-wsLS4xNJSDw-GBZatB2jFpoxmPoUrqK4umfgHtvqmMCCMxynzjzoP-C1QpWNii6lFMVwPck-6aDVdrnZxn2xdDoW8VygYDBuU9R0nTNK28CPUTJlBUQtFJg8OTysiFGFmXnRH28vR49H7eoUlxVTP67O3JSJ49vwQz4obRdsYCZqXvu44bx48uODujfJfTokrn5It1hlD0ExyvaFuVXGe_w738mwP2b8rYmrtCVz3JyVi1pBNNYk2IBCckln_ilU"/>
+    <div class="absolute inset-0 bg-gradient-to-t from-on-surface/90 via-on-surface/40 to-transparent"></div>
+    <div class="relative z-10">
+        <span class="inline-block px-3 py-1 bg-primary text-on-primary text-xs font-semibold rounded-full mb-3 uppercase tracking-wider">Sciences</span>
+        <h3 class="text-2xl font-bold text-surface-container-lowest font-headline mb-2">Others</h3>
+        <p class="text-surface-variant text-sm font-body line-clamp-2">Star charts and observational logs from the pre-digital era.</p>
+    </div>
 </div>
 </div>
 </section>
 <!-- Minimal Content Block -->
+/section>
+<!-- Minimal Content Block -->
 <section class="max-w-4xl mx-auto text-center mb-20">
-<h2 class="text-3xl font-bold mb-6 font-headline tracking-tight text-on-surface">Precision in Preservation</h2>
+<h2 class="text-3xl font-bold mb-6 font-headline tracking-tight text-on-surface">Our Intention</h2>
 <p class="text-lg text-secondary mb-10 font-body leading-relaxed">
-                 We reject the cluttered, "boxed-in" aesthetic of traditional digital libraries. By leveraging intentional asymmetry, expansive white space, and high-contrast typography, we transform a simple database into a prestigious digital environment.
+                เราเชื่อว่า "ข้อมูลที่ถูกต้อง คือจุดเริ่มต้นของการเปลี่ยนแปลง" การรวบรวมงานวิจัยและบทความวิเคราะห์ปัญหาการศึกษาไทยในโปรเจคนี้ มีวัตถุประสงค์เพื่อเป็นฐานข้อมูลให้เหล่านักการศึกษา นโยบาย และผู้ที่สนใจ ได้เข้ามาเรียนรู้ความผิดพลาดในอดีต และค้นหาโมเดลความสำเร็จใหม่ๆ เพื่อร่วมกันผลักดันการปฏิรูปให้เกิดขึ้นจริง
              </p>
-        <a href="test.html"
+             <a href="test.html">
 <button class="bg-primary text-on-primary px-8 py-3 rounded-md font-semibold font-body hover:bg-primary-container transition-colors duration-300 shadow-[0px_12px_32px_rgba(175,16,26,0.2)]">
                  Explore the Archive
              </button>
-        </a>
+             </a>
 </section>
 </main>
 <!-- Footer -->
