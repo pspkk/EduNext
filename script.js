@@ -487,20 +487,61 @@ function setupPagination() {
     wrapper.innerHTML = "";
     const pageCount = Math.ceil(filteredBooks.length / rowsPerPage);
 
-    for (let i = 1; i <= pageCount; i++) {
-        const btn = document.createElement('button');
-        btn.innerText = i;
-        btn.className = (i === currentPage) 
-            ? "w-10 h-10 bg-[#af101a] text-white font-bold" 
-            : "w-10 h-10 bg-white text-zinc-600 border border-zinc-200 hover:bg-zinc-50";
-        
-        btn.addEventListener('click', () => {
-            currentPage = i;
-            displayContent();
-            window.scrollTo(0, 0);
-        });
-        wrapper.appendChild(btn);
+    if (pageCount <= 1) return; // ถ้ามีหน้าเดียวไม่ต้องแสดง
+
+    // --- คำนวณช่วงของเลขหน้าที่จะแสดง (แสดงสูงสุด 5 เลข) ---
+    let maxVisibleButtons = 5;
+    let startPage = Math.max(1, currentPage - Math.floor(maxVisibleButtons / 2));
+    let endPage = Math.min(pageCount, startPage + maxVisibleButtons - 1);
+
+    // ปรับ startPage อีกครั้งถ้า endPage ไปติดขอบสุดท้าย
+    if (endPage - startPage + 1 < maxVisibleButtons) {
+        startPage = Math.max(1, endPage - maxVisibleButtons + 1);
     }
+
+    // ฟังก์ชันช่วยสร้างปุ่ม
+    const createBtn = (content, targetPage, isDisabled, isActive = false) => {
+        const btn = document.createElement('button');
+        btn.innerHTML = content;
+        btn.disabled = isDisabled;
+        
+        // กำหนดสไตล์
+        let baseClass = "w-10 h-10 flex items-center justify-center rounded-lg transition-all duration-200 text-sm ";
+        if (isActive) {
+            btn.className = baseClass + "bg-[#af101a] text-white font-bold shadow-md shadow-red-600/20";
+        } else if (isDisabled) {
+            btn.className = baseClass + "bg-zinc-100 text-zinc-300 cursor-not-allowed";
+        } else {
+            btn.className = baseClass + "bg-white text-zinc-600 border border-zinc-200 hover:border-red-600 hover:text-red-600";
+        }
+
+        btn.addEventListener('click', () => {
+            if (!isDisabled) {
+                currentPage = targetPage;
+                displayContent();
+                
+                // เลื่อนหน้าจอลงมาที่จุดเริ่มต้นของเนื้อหา (ข้าม Filter ในมือถือ)
+                const scrollTarget = document.getElementById('content-start');
+                if (window.innerWidth < 768 && scrollTarget) {
+                    scrollTarget.scrollIntoView({ behavior: 'smooth' });
+                } else {
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                }
+            }
+        });
+        return btn;
+    };
+
+    // 1. ปุ่ม First (<<)
+    wrapper.appendChild(createBtn('<span class="material-symbols-outlined">first_page</span>', 1, currentPage === 1));
+
+    // 2. ปุ่มเลขหน้า (แสดงตามช่วง startPage ถึง endPage)
+    for (let i = startPage; i <= endPage; i++) {
+        wrapper.appendChild(createBtn(i, i, false, i === currentPage));
+    }
+
+    // 3. ปุ่ม Last (>>)
+    wrapper.appendChild(createBtn('<span class="material-symbols-outlined">last_page</span>', pageCount, currentPage === pageCount));
 }
 
 // 6. ผูกเหตุการณ์เข้ากับปุ่ม/ช่องค้นหา และตรวจสอบ URL Parameter
