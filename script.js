@@ -556,7 +556,7 @@ function initHomeSearch() {
 
         if (matches.length > 0) {
             previewList.innerHTML = matches.map(book => `
-                <div onclick="window.location.href='test.html?search=${encodeURIComponent(book.title)}'" 
+                <div onclick="window.location.href='library.html?search=${encodeURIComponent(book.title)}'" 
                      class="p-4 hover:bg-zinc-50 cursor-pointer border-b border-zinc-50 last:border-0 flex items-center gap-4 group text-left">
                     <img src="${book.img}" class="w-10 h-14 object-cover rounded shadow-sm">
                     <div>
@@ -624,7 +624,8 @@ document.addEventListener('DOMContentLoaded', () => {
     } else if (document.getElementById('card-list')) {
         displayContent(); // แสดงหน้า Library เฉพาะเมื่ออยู่ในหน้านั้น
     }
-// ฟังก์ชันสำหรับ Card ในหน้า Home
+});
+    // ฟังก์ชันสำหรับ Card ในหน้า Home
 function filterByCategory(catName) {
     window.location.href = `test.html?category=${encodeURIComponent(catName)}`;
 }
