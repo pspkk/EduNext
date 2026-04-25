@@ -427,7 +427,7 @@ function displayContent() {
         document.getElementById('pagination').innerHTML = "";
         return;
       
-      if (window.innerWidth < 768) {
+      if (window.innerWidth < 500) {
         document.getElementById('content-start').scrollIntoView({ behavior: 'smooth' });
     }
     }
