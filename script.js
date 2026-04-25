@@ -624,7 +624,12 @@ document.addEventListener('DOMContentLoaded', () => {
     } else if (document.getElementById('card-list')) {
         displayContent(); // แสดงหน้า Library เฉพาะเมื่ออยู่ในหน้านั้น
     }
-  // ปรับปรุงส่วน DOMContentLoaded ในหน้า Library
+// ฟังก์ชันสำหรับ Card ในหน้า Home
+function filterByCategory(catName) {
+    window.location.href = `test.html?category=${encodeURIComponent(catName)}`;
+}
+
+// ปรับปรุงส่วน DOMContentLoaded ในหน้า Library
 document.addEventListener('DOMContentLoaded', () => {
     // ... ส่วนผูก Event Listeners เดิม (Search, Year, Type, Category) ...
     
@@ -650,5 +655,4 @@ document.addEventListener('DOMContentLoaded', () => {
     else if (document.getElementById('card-list')) {
         displayContent();
     }
-});
 });
