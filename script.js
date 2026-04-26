@@ -277,7 +277,7 @@ const books = [
      img: "https://via.placeholder.com/150", 
      category: ["Educational reform", "Education policy", "Educational equality"],
      keywords: ["ผู้นำทางการศึกษา", "เทคโนโลยีทางการศึกษา", "บูรณาการ"],
-     link: "hthttps://slims.is.hu.swu.ac.th/index.php?p=show_detail&id=598&keywords="},
+     link: "https://slims.is.hu.swu.ac.th/index.php?p=show_detail&id=598&keywords="},
 
       { type: "Music", 
      year: "2021", 
