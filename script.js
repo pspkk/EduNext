@@ -289,7 +289,7 @@ const books = [
      keywords: ["การศึกษา", "ปัญหาการศึกษา", "สิทธิเด็ก", "ระเบียบโรงเรียน"],
      link: "https://slims.is.hu.swu.ac.th/index.php?p=show_detail&id=559&keywords="},
 
-      { type: " Video", 
+      { type: "Video", 
      year: "2022", 
      title: "ระบบการศึกษาที่ตอกย้ำความเหลื่อมล้ำ", 
      author: "พูด", 
