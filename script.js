@@ -289,7 +289,7 @@ const books = [
      keywords: ["การศึกษา", "ปัญหาการศึกษา", "สิทธิเด็ก", "ระเบียบโรงเรียน"],
      link: "https://slims.is.hu.swu.ac.th/index.php?p=show_detail&id=545&keywords="},
 
-      { type: " Podcast", 
+      { type: " Video", 
      year: "2022", 
      title: "ระบบการศึกษาที่ตอกย้ำความเหลื่อมล้ำ", 
      author: "พูด", 
@@ -307,7 +307,7 @@ const books = [
      img: "https://via.placeholder.com/150", 
      category: ["Educational problems", "Educational reform", "Education policy"],
      keywords: ["การศึกษา", "ปัญหาการศึกษา", "ปฏิรูปการศึกษา", "การรวมศูนย์อำนาจ"],
-     link: "https://slims.is.hu.swu.ac.th/index.php?p=show_detail&id=551&keywords="},
+     link: "https://slims.is.hu.swu.ac.th/index.php?p=show_detail&id=545&keywords="},
 
       {  type: "Podcast", 
      year: "2022", 
@@ -348,16 +348,6 @@ const books = [
      category: ["Educational problems", "Educational reform"],
      keywords: ["การศึกษา", "ปัญหาการศึกษา", "ระบบการศึกษาไทย", "เสียดสีสังคม"],
      link: "https://slims.is.hu.swu.ac.th/index.php?p=show_detail&id=550"},
-
-     { type: "Video", 
-     year: "2022", 
-     title: "ระบบการศึกษาที่ตอกย้ำความเหลื่อมล้ำ", 
-     author: "พูด", 
-     desc: "วิดีโอวิพากษ์วิจารณ์โครงสร้างระบบการศึกษาไทยที่ถูกออกแบบมาในลักษณะที่นอกจากจะไม่ช่วยลดช่องว่างทางสังคมแล้ว ยังกลับกลายเป็นกลไกที่ช่วยตอกย้ำความเหลื่อมล้ำให้ชัดเจนยิ่งขึ้น โดยนำเสนอผ่านประเด็นการเข้าถึงทรัพยากร โอกาสทางการเรียนรู้ และผลกระทบเชิงระบบที่ทำให้เด็กจากครอบครัวต่างฐานะได้รับคุณภาพการศึกษาที่ไม่เท่าเทียมกัน", 
-     img: "https://via.placeholder.com/150", 
-     category: ["Educational equality", "Educational problems", "Education policy"],
-     keywords: ["ความเหลื่อมล้ำทางการศึกษา", "ปัญหาการศึกษาไทย", "SDG4", "ระบบการศึกษา"],
-     link: "https://slims.is.hu.swu.ac.th/index.php?p=show_detail&id=549"}
 ];
 
 // 2. ตั้งค่าตัวแปรควบคุมระบบ
