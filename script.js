@@ -628,7 +628,7 @@ function initHomeSearch() {
 
         if (matches.length > 0) {
             previewList.innerHTML = matches.map(book => `
-                <div onclick="window.location.href='library.html?search=${encodeURIComponent(book.title)}'" 
+                <div onclick="window.location.href='archive.html?search=${encodeURIComponent(book.title)}'" 
                      class="p-4 hover:bg-zinc-50 cursor-pointer border-b border-zinc-50 last:border-0 flex items-center gap-4 group text-left">
                     <img src="${book.img}" class="w-10 h-14 object-cover rounded shadow-sm">
                     <div>
