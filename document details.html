@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Document Details - EduNext Archive</title>
+    
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,300..800;1,300..800&family=Public+Sans:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet"/>
+    
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary-fixed-dim": "#ffb4a8",
+                        "surface-container-low": "#f6f3ee",
+                        "primary-fixed": "#ffdad4",
+                        "surface-bright": "#fcf9f4",
+                        "on-background": "#1c1c19",
+                        "on-secondary": "#ffffff",
+                        "on-tertiary-fixed": "#261907",
+                        "surface-container-high": "#ebe8e3",
+                        "tertiary-fixed": "#f8dec1",
+                        "on-primary-container": "#ff907f",
+                        "on-primary-fixed-variant": "#920703",
+                        "on-secondary-fixed": "#1f1b17",
+                        "surface": "#fcf9f4",
+                        "primary": "#610000",
+                        "outline-variant": "#e3beb8",
+                        "on-surface-variant": "#5a403c",
+                        "inverse-surface": "#31302d",
+                        "surface-variant": "#e5e2dd",
+                        "tertiary": "#382916",
+                        "surface-container-highest": "#e5e2dd",
+                        "on-primary": "#ffffff",
+                        "surface-container-lowest": "#ffffff",
+                        "secondary-container": "#eae1da",
+                        "on-error-container": "#93000a",
+                        "on-primary-fixed": "#410000",
+                        "inverse-on-surface": "#f3f0eb",
+                        "tertiary-container": "#503f2a",
+                        "error-container": "#ffdad6",
+                        "secondary-fixed-dim": "#cec5be",
+                        "tertiary-fixed-dim": "#dbc3a6",
+                        "background": "#fcf9f4",
+                        "on-secondary-container": "#6a635e",
+                        "surface-container": "#f0ede8",
+                        "inverse-primary": "#ffb4a8",
+                        "on-error": "#ffffff",
+                        "secondary-fixed": "#eae1da",
+                        "outline": "#8e706b",
+                        "surface-tint": "#b52619",
+                        "on-tertiary-fixed-variant": "#55442e",
+                        "error": "#ba1a1a",
+                        "surface-dim": "#dcdad5",
+                        "on-tertiary-container": "#c2ab8f",
+                        "on-surface": "#1c1c19",
+                        "on-tertiary": "#ffffff",
+                        "primary-container": "#8b0000",
+                        "on-secondary-fixed-variant": "#4b4641",
+                        "secondary": "#635d58"
+                    },
+                    fontFamily: {
+                        "headline": ["Newsreader", "serif"],
+                        "body": ["Public Sans", "sans-serif"],
+                        "label": ["Public Sans", "sans-serif"]
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: theme('colors.surface');
+            color: theme('colors.on-surface');
+            font-family: theme('fontFamily.body');
+            background-image: radial-gradient(circle at 100% 0%, #f6f3ee 0%, transparent 40%), 
+                              radial-gradient(circle at 0% 100%, #f6f3ee 0%, transparent 40%);
+            background-attachment: fixed;
+        }
+    </style>
+</head>
+
+<body class="antialiased min-h-screen flex flex-col selection:bg-primary-container selection:text-on-primary-container">
+
+    <header class="bg-[#FCF9F4]/90 backdrop-blur-xl docked full-width top-0 rounded-none border-b border-outline-variant/30 shadow-sm z-50 sticky transition-all duration-300">
+        <!DOCTYPE html>
+<html class="light" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>EduForward - Archive</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+    <link rel="icon" type="image/png" href="img/logo6.png">
+    
+    <style>
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Inter', sans-serif; overflow-x: hidden; }
+        h1, h2, h3, .font-headline { font-family: 'Manrope', sans-serif; }
+        /* ซ่อน Scrollbar สำหรับส่วนที่ยาวเกิน */
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+    </style>
+</head>
+
+<body class="bg-white text-zinc-900 antialiased">
+
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-white/70 dark:bg-zinc-950/70 backdrop-blur-md border-b border-zinc-200/50 dark:border-zinc-800/50 font-['Manrope']">
+    <div class="flex justify-between items-center w-full px-4 md:px-6 py-4 max-w-7xl mx-auto">
+        
+        <div class="flex-shrink-0 text-lg md:text-2xl font-bold tracking-tighter text-zinc-900 dark:text-zinc-50">
+            <a href="./index.html" class="flex items-center gap-2 md:gap-3 group">
+                <img src="img/logo2.png" class="h-6 md:h-9 w-auto" alt="Logo">
+                <span class="truncate">EduForward</span>
+            </a>
+        </div>
+
+        <div class="flex items-center gap-1 md:gap-4">
+            <a href="./archive" class="px-2 md:px-3 py-2 text-xs md:text-sm font-medium text-zinc-600 dark:text-zinc-400">
+                Archive
+            </a>
+            <a href="./index#about-section" class="px-2 md:px-3 py-2 text-xs md:text-sm font-medium text-zinc-600 dark:text-zinc-400">
+                    About Us
+            </a>
+            <a href="#" class="ml-1 px-3 py-1.5 md:px-4 md:py-2 text-xs md:text-sm font-bold text-white bg-red-600 rounded-full">
+                Contact
+            </a>
+        </div>
+        
+    </div>
+</nav>
+    </header>
+
+    <main class="flex-grow max-w-screen-xl mx-auto w-full px-4 sm:px-8 py-10 lg:py-20">
+        
+        <div class="mb-10">
+            <a class="inline-flex items-center gap-2 text-on-surface-variant font-label text-xs tracking-[0.15em] uppercase hover:text-primary transition-colors duration-300 group" href="archive.html">
+                <span class="material-symbols-outlined text-lg transform group-hover:-translate-x-1 transition-transform" style="font-variation-settings: 'FILL' 0;">arrow_back</span>
+                Back to Library
+            </a>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-start">
+            
+            <div class="lg:col-span-4 relative group">
+                <div class="bg-white p-3 shadow-2xl rounded-xl relative z-10 aspect-[2/3] ring-1 ring-black/5 transition-transform duration-500 group-hover:-translate-y-2 group-hover:shadow-[0_30px_60px_rgba(28,28,25,0.15)]">
+                    <img id="book-cover" alt="Cover image" class="w-full h-full object-cover rounded-lg" src=""/>
+                    <div class="absolute inset-0 bg-gradient-to-tr from-black/5 via-transparent to-white/20 rounded-xl pointer-events-none"></div>
+
+                    <div>
+                        <h3 class="font-label text-xs tracking-[0.15em] uppercase text-on-surface-variant mb-4 font-bold flex items-center gap-2" style="margin-top: 15px;">
+                            <span class="material-symbols-outlined text-base">label</span>
+                            Keywords
+                        </h3>
+                    <div id="book-keywords" class="flex flex-wrap gap-2.5"></div>
+                    </div>
+                </div>
+                
+            </div>
+
+            <div class="lg:col-span-8 flex flex-col gap-8">
+                
+                <div class="border-b border-outline-variant/30 pb-6">
+                    <div class="flex items-center gap-2 mb-3">
+                        <span id="book-type-badge" class="px-2 py-0.5 bg-zinc-200 text-zinc-700 text-[10px] rounded-md uppercase tracking-wider font-bold">
+                            Type
+                     </span>
+                      <span id="book-year-badge" class="px-2 py-0.5 border border-outline-variant text-on-surface-variant text-[10px] rounded-md uppercase tracking-wider font-bold">
+                          Year
+                       </span>
+                    </div>
+    
+                        <h1 id="book-title" class="font-headline text-2xl lg:text-3xl font-bold text-on-surface tracking-tight mb-3 leading-tight">
+                        กำลังโหลดข้อมูล...
+                    </h1>
+    
+                    <div class="flex items-center gap-2 text-on-surface-variant">
+                      <span class="material-symbols-outlined text-lg" style="font-variation-settings: 'FILL' 1;">edit_document</span>
+                      <p id="book-author" class="font-body text-base lg:text-lg italic font-medium">
+                          กรุณารอสักครู่
+                        </p>
+                    </div>
+                </div>
+
+                <div class="mt-4 bg-gradient-to-br from-surface-container-low to-white p-8 border border-outline-variant/30 flex flex-col sm:flex-row items-center justify-between gap-6 rounded-2xl relative overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300">
+                    <div class="absolute -right-10 -top-10 text-primary/5">
+                        <span class="material-symbols-outlined text-[150px]" style="font-variation-settings: 'FILL' 1;">local_library</span>
+                    </div>
+                    
+                    <div class="relative z-10 flex-grow text-center sm:text-left">
+                        <h2 class="font-headline text-2xl font-bold text-on-surface mb-1">Digital Access</h2>
+                        <p class="font-body text-on-surface-variant text-sm">อ่านและเข้าถึงเอกสารฉบับเต็มได้ผ่านระบบฐานข้อมูล</p>
+                    </div>
+
+                    <a id="book-slims-link" href="#" target="_blank" class="relative z-10 bg-primary text-white font-label text-sm tracking-wide uppercase px-8 py-4 rounded-xl hover:bg-[#8B0000] shadow-[0_4px_14px_0_rgba(97,0,0,0.39)] hover:shadow-[0_6px_20px_rgba(97,0,0,0.23)] hover:-translate-y-1 transition-all duration-300 flex items-center gap-3 flex-shrink-0 w-full sm:w-auto justify-center group">
+                        <span class="material-symbols-outlined text-xl group-hover:scale-110 transition-transform" style="font-variation-settings: 'FILL' 1;">open_in_new</span>
+                        Access via SLIMS
+                    </a>
+                </div>
+
+                <div>
+                    <h3 class="font-label text-xs tracking-[0.15em] uppercase text-on-surface-variant mb-4 font-bold flex items-center gap-2">
+                        <span class="material-symbols-outlined text-base">subject</span>
+                        Abstract / Description
+                    </h3>
+                    <div class="relative bg-white/60 backdrop-blur-md p-6 lg:p-8 rounded-2xl border border-outline-variant/20 shadow-sm">
+                        <div class="absolute left-0 top-6 bottom-6 w-1 bg-primary rounded-r-full opacity-80"></div>
+                        <p id="book-description" class="font-body text-base lg:text-lg leading-relaxed text-on-surface-variant text-justify">
+                            -
+                        </p>
+                    </div>
+                </div>
+
+                </div>
+                
+            </div>
+        </div>
+    </main>
+<!-- Footer -->
+<footer class="w-full mt-20 bg-zinc-100 dark:bg-zinc-900 font-['Inter'] text-sm tracking-wide no-border tonal-shift flat no shadows">
+<div class="flex flex-col md:flex-row justify-between items-center px-12 py-10 w-full max-w-[1920px] mx-auto">
+<div class="font-['Manrope'] font-black uppercase tracking-widest text-zinc-400 mb-6 md:mb-0">
+                The Digital Library
+            </div>
+<div class="flex flex-wrap justify-center md:justify-end gap-6 mb-6 md:mb-0">
+<a class="text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 underline decoration-red-700 transition-all duration-200" href="#">Privacy Policy</a>
+<a class="text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 underline decoration-red-700 transition-all duration-200" href="#">Terms of Service</a>
+<a class="text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 underline decoration-red-700 transition-all duration-200" href="#">Accessibility</a>
+<a class="text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 underline decoration-red-700 transition-all duration-200" href="#">Contact Us</a>
+</div>
+<div class="text-zinc-500 dark:text-zinc-400">
+                © 2026 EduForward Archive. All rights reserved.
+            </div>
+</div>
+</footer>
+
+    <script src="script.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const urlParams = new URLSearchParams(window.location.search);
+            const targetId = urlParams.get('id');
+
+            if (typeof books !== 'undefined' && targetId) {
+                const book = books.find(item => item.id == targetId);
+
+                if (book) {
+                    // ภาพหน้าปก
+                    document.getElementById('book-cover').src = book.img ? book.img : "https://via.placeholder.com/400x600?text=No+Cover";
+                    
+                    // ข้อมูลหลัก
+                    document.getElementById('book-title').textContent = book.title;
+                    document.title = `${book.title} - EduForward Archive`; 
+                    document.getElementById('book-author').textContent = `By ${book.author}`;
+                    
+                    // ป้าย Badges
+                    document.getElementById('book-type-badge').textContent = book.type;
+                    document.getElementById('book-year-badge').textContent = book.year;
+
+                    // รายละเอียด
+                    document.getElementById('book-description').textContent = book.desc;
+
+                    // คีย์เวิร์ด
+                    const keywordsContainer = document.getElementById('book-keywords');
+                    if (book.keywords && book.keywords.length > 0) {
+                        keywordsContainer.innerHTML = book.keywords.map(kw => 
+                            `<span class="bg-white border border-outline-variant/40 text-primary shadow-sm px-4 py-1.5 rounded-full text-xs font-['Public_Sans'] tracking-wider hover:bg-primary hover:text-white transition-colors duration-300 cursor-default">${kw}</span>`
+                        ).join('');
+                    } else {
+                        keywordsContainer.innerHTML = `<span class="text-sm text-gray-400 italic">No keywords provided.</span>`;
+                    }
+
+                    // ลิงก์
+                    const slimsLink = document.getElementById('book-slims-link');
+                    if (book.link && book.link !== "") {
+                        slimsLink.href = book.link;
+                    } else {
+                        slimsLink.style.display = 'none'; 
+                    }
+
+                } else {
+                    document.getElementById('book-title').textContent = "ไม่พบข้อมูลเอกสาร";
+                    document.getElementById('book-description').textContent = "ไม่พบรหัสเอกสารนี้ในฐานข้อมูล โปรดกลับไปค้นหาใหม่";
+                    document.getElementById('book-slims-link').style.display = 'none';
+                    document.getElementById('book-author').textContent = "-";
+                    document.getElementById('book-type-badge').style.display = 'none';
+                    document.getElementById('book-year-badge').style.display = 'none';
+                }
+            } else {
+                document.getElementById('book-title').textContent = "เกิดข้อผิดพลาด";
+                document.getElementById('book-description').textContent = "ไม่พบรหัสอ้างอิงของเอกสาร กรุณากดเข้าเอกสารจากหน้าระบบค้นหา";
+                document.getElementById('book-slims-link').style.display = 'none';
+                document.getElementById('book-author').textContent = "-";
+                document.getElementById('book-type-badge').style.display = 'none';
+                document.getElementById('book-year-badge').style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>
