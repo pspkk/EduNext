@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8"/>
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-    <title>EduForward - Archive</title>
+    <title>EduForward - Archive Details</title>
     
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
@@ -12,207 +12,154 @@
     
     <style>
         html { scroll-behavior: smooth; }
-        body { font-family: 'Inter', sans-serif; overflow-x: hidden; }
+        body { 
+            font-family: 'Inter', sans-serif; 
+            overflow-x: hidden;
+            background-color: #ffffff;
+            background-image: radial-gradient(#e5e7eb 0.5px, transparent 0.5px);
+            background-size: 30px 30px;
+        }
         h1, h2, h3, .font-headline { font-family: 'Manrope', sans-serif; }
-        /* ซ่อน Scrollbar สำหรับส่วนที่ยาวเกิน */
-        .no-scrollbar::-webkit-scrollbar { display: none; }
     </style>
 </head>
 
 <body class="bg-white text-zinc-900 antialiased">
 
-<!-- TopNavBar -->
-<nav class="fixed top-0 w-full z-50 bg-white/70 dark:bg-zinc-950/70 backdrop-blur-md border-b border-zinc-200/50 dark:border-zinc-800/50 font-['Manrope']">
-    <div class="flex justify-between items-center w-full px-4 md:px-6 py-4 max-w-7xl mx-auto">
-        
-        <div class="flex-shrink-0 text-lg md:text-2xl font-bold tracking-tighter text-zinc-900 dark:text-zinc-50">
-            <a href="./index.html" class="flex items-center gap-2 md:gap-3 group">
-                <img src="img/logo2.png" class="h-6 md:h-9 w-auto" alt="Logo">
+<nav class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-md border-b border-zinc-200/50 font-['Manrope']">
+    <div class="flex justify-between items-center w-full px-6 py-4 max-w-7xl mx-auto">
+        <div class="flex-shrink-0 text-xl font-bold tracking-tighter text-zinc-900">
+            <a href="./index.html" class="flex items-center gap-3 group">
+                <img src="img/logo2.png" class="h-8 w-auto" alt="Logo">
                 <span class="truncate">EduForward</span>
             </a>
         </div>
-
-        <div class="flex items-center gap-1 md:gap-4">
-            <a href="./archive" class="px-2 md:px-3 py-2 text-xs md:text-sm font-medium text-zinc-600 dark:text-zinc-400">
-                Archive
-            </a>
-            <a href="./index#about-section" class="px-2 md:px-3 py-2 text-xs md:text-sm font-medium text-zinc-600 dark:text-zinc-400">
-                    About Us
-            </a>
-            <a href="#" class="ml-1 px-3 py-1.5 md:px-4 md:py-2 text-xs md:text-sm font-bold text-white bg-red-600 rounded-full">
-                Contact
-            </a>
+        <div class="flex items-center gap-2 md:gap-6">
+            <a href="./archive" class="px-2 py-2 text-sm font-semibold text-zinc-600 hover:text-red-600 transition-colors">Archive</a>
+            <a href="./index#about-section" class="px-2 py-2 text-sm font-semibold text-zinc-600 hover:text-red-600 transition-colors">About Us</a>
+            <a href="#" class="ml-2 px-5 py-2 text-sm font-bold text-white bg-red-600 rounded-full hover:bg-red-700 shadow-lg shadow-red-600/20 transition-all">Contact</a>
         </div>
-        
     </div>
 </nav>
 
-<main class="pt-20 md:pt-24 max-w-screen-xl mx-auto w-full px-6 lg:px-8 pb-12">
+<main class="pt-28 md:pt-32 max-w-7xl mx-auto w-full px-6 md:px-10 pb-20">
     
-    <div class="mb-6 relative z-10">
-        <a class="inline-flex items-center gap-2 text-zinc-500 font-bold text-[10px] md:text-xs tracking-widest uppercase hover:text-red-600 transition-colors group" href="test.html">
+    <div class="mb-8">
+        <a class="inline-flex items-center gap-2 text-zinc-400 font-bold text-[11px] tracking-[0.2em] uppercase hover:text-red-600 transition-all group" href="test.html">
             <span class="material-symbols-outlined text-lg transform group-hover:-translate-x-1 transition-transform">arrow_back</span>
             Back to Library
         </a>
     </div>
 
-    </main>
-
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-start">
-            
-            <div class="lg:col-span-4 relative group">
-                <div class="bg-white p-3 shadow-2xl rounded-xl relative z-10 aspect-[2/3] ring-1 ring-black/5 transition-transform duration-500 group-hover:-translate-y-2 group-hover:shadow-[0_30px_60px_rgba(28,28,25,0.15)]">
-                    <img id="book-cover" alt="Cover image" class="w-full h-full object-cover rounded-lg" src=""/>
-                    <div class="absolute inset-0 bg-gradient-to-tr from-black/5 via-transparent to-white/20 rounded-xl pointer-events-none"></div>
-
-                    <div>
-                        <h3 class="font-label text-xs tracking-[0.15em] uppercase text-on-surface-variant mb-4 font-bold flex items-center gap-2" style="margin-top: 15px;">
-                            <span class="material-symbols-outlined text-base">label</span>
-                            Keywords
-                        </h3>
-                    <div id="book-keywords" class="flex flex-wrap gap-2.5"></div>
-                    </div>
-                </div>
-                
-            </div>
-
-            <div class="lg:col-span-8 flex flex-col gap-8">
-                
-                <div class="border-b border-outline-variant/30 pb-6">
-                    <div class="flex items-center gap-2 mb-3">
-                        <span id="book-type-badge" class="px-2 py-0.5 bg-zinc-200 text-zinc-700 text-[10px] rounded-md uppercase tracking-wider font-bold">
-                            Type
-                     </span>
-                      <span id="book-year-badge" class="px-2 py-0.5 border border-outline-variant text-on-surface-variant text-[10px] rounded-md uppercase tracking-wider font-bold">
-                          Year
-                       </span>
-                    </div>
-    
-                        <h1 id="book-title" class="font-headline text-2xl lg:text-3xl font-bold text-on-surface tracking-tight mb-3 leading-tight">
-                        กำลังโหลดข้อมูล...
-                    </h1>
-    
-                    <div class="flex items-center gap-2 text-on-surface-variant">
-                      <span class="material-symbols-outlined text-lg" style="font-variation-settings: 'FILL' 1;">edit_document</span>
-                      <p id="book-author" class="font-body text-base lg:text-lg italic font-medium">
-                          กรุณารอสักครู่
-                        </p>
-                    </div>
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-start">
+        
+        <div class="lg:col-span-4 flex flex-col gap-8">
+            <div class="sticky top-32">
+                <div class="bg-white p-3 shadow-[0_20px_50px_rgba(0,0,0,0.08)] rounded-2xl ring-1 ring-black/5">
+                    <img id="book-cover" alt="Cover image" class="w-full h-auto aspect-[2/3] object-cover rounded-xl" src=""/>
                 </div>
 
-                <div class="mt-4 bg-gradient-to-br from-surface-container-low to-white p-8 border border-outline-variant/30 flex flex-col sm:flex-row items-center justify-between gap-6 rounded-2xl relative overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300">
-                    <div class="absolute -right-10 -top-10 text-primary/5">
-                        <span class="material-symbols-outlined text-[150px]" style="font-variation-settings: 'FILL' 1;">local_library</span>
-                    </div>
-                    
-                    <div class="relative z-10 flex-grow text-center sm:text-left">
-                        <h2 class="font-headline text-2xl font-bold text-on-surface mb-1">Digital Access</h2>
-                        <p class="font-body text-on-surface-variant text-sm">อ่านและเข้าถึงเอกสารฉบับเต็มได้ผ่านระบบฐานข้อมูล</p>
-                    </div>
-
-                    <a id="book-slims-link" href="#" target="_blank" class="relative z-10 bg-primary text-white font-label text-sm tracking-wide uppercase px-8 py-4 rounded-xl hover:bg-[#8B0000] shadow-[0_4px_14px_0_rgba(97,0,0,0.39)] hover:shadow-[0_6px_20px_rgba(97,0,0,0.23)] hover:-translate-y-1 transition-all duration-300 flex items-center gap-3 flex-shrink-0 w-full sm:w-auto justify-center group">
-                        <span class="material-symbols-outlined text-xl group-hover:scale-110 transition-transform" style="font-variation-settings: 'FILL' 1;">open_in_new</span>
-                        Access via SLIMS
-                    </a>
-                </div>
-
-                <div>
-                    <h3 class="font-label text-xs tracking-[0.15em] uppercase text-on-surface-variant mb-4 font-bold flex items-center gap-2">
-                        <span class="material-symbols-outlined text-base">subject</span>
-                        Abstract / Description
+                <div class="mt-6">
+                    <h3 class="font-label text-[10px] tracking-[0.2em] uppercase text-zinc-400 mb-3 font-bold flex items-center gap-2">
+                        <span class="material-symbols-outlined text-base">label</span>
+                        Keywords
                     </h3>
-                    <div class="relative bg-white/60 backdrop-blur-md p-6 lg:p-8 rounded-2xl border border-outline-variant/20 shadow-sm">
-                        <div class="absolute left-0 top-6 bottom-6 w-1 bg-primary rounded-r-full opacity-80"></div>
-                        <p id="book-description" class="font-body text-base lg:text-lg leading-relaxed text-on-surface-variant text-justify">
-                            -
-                        </p>
-                    </div>
+                    <div id="book-keywords" class="flex flex-wrap gap-2">
+                        </div>
                 </div>
-
-                </div>
-                
             </div>
         </div>
-    </main>
-<!-- Footer -->
-<footer class="w-full mt-20 bg-zinc-100 dark:bg-zinc-900 font-['Inter'] text-sm tracking-wide no-border tonal-shift flat no shadows">
-<div class="flex flex-col md:flex-row justify-between items-center px-12 py-10 w-full max-w-[1920px] mx-auto">
-<div class="font-['Manrope'] font-black uppercase tracking-widest text-zinc-400 mb-6 md:mb-0">
-                The Digital Library
+
+        <div class="lg:col-span-8 flex flex-col gap-8">
+            
+            <div class="border-b border-zinc-100 pb-6">
+                <div class="flex items-center gap-2 mb-4">
+                    <span id="book-type-badge" class="px-2 py-0.5 bg-zinc-100 text-zinc-600 text-[10px] rounded font-bold uppercase">Type</span>
+                    <span id="book-year-badge" class="px-2 py-0.5 border border-zinc-200 text-zinc-400 text-[10px] rounded font-bold uppercase">Year</span>
+                </div>
+
+                <h1 id="book-title" class="text-3xl lg:text-4xl font-extrabold text-zinc-900 tracking-tight leading-tight mb-4">
+                    กำลังโหลดข้อมูล...
+                </h1>
+
+                <div class="flex items-center gap-2 text-zinc-500">
+                    <span class="material-symbols-outlined text-xl text-red-600">edit_document</span>
+                    <p id="book-author" class="font-body text-lg italic font-medium">กรุณารอสักครู่</p>
+                </div>
             </div>
-<div class="flex flex-wrap justify-center md:justify-end gap-6 mb-6 md:mb-0">
-<a class="text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 underline decoration-red-700 transition-all duration-200" href="#">Privacy Policy</a>
-<a class="text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 underline decoration-red-700 transition-all duration-200" href="#">Terms of Service</a>
-<a class="text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 underline decoration-red-700 transition-all duration-200" href="#">Accessibility</a>
-<a class="text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 underline decoration-red-700 transition-all duration-200" href="#">Contact Us</a>
-</div>
-<div class="text-zinc-500 dark:text-zinc-400">
-                © 2026 EduForward Archive. All rights reserved.
+
+            <div class="bg-zinc-900 rounded-2xl p-6 md:p-8 flex flex-col sm:flex-row items-center justify-between gap-6 shadow-xl">
+                <div class="text-center sm:text-left">
+                    <h2 class="text-white text-lg font-bold mb-0.5 tracking-tight">Digital Access</h2>
+                    <p class="text-zinc-400 text-xs font-medium">อ่านและเข้าถึงเอกสารฉบับเต็มได้ผ่านระบบฐานข้อมูล</p>
+                </div>
+                <a id="book-slims-link" href="#" target="_blank" class="w-full sm:w-auto bg-red-600 text-white font-bold text-xs uppercase tracking-widest px-8 py-3.5 rounded-xl hover:bg-red-700 transition-all flex items-center justify-center gap-2 active:scale-95 shadow-lg shadow-red-900/20">
+                    <span class="material-symbols-outlined text-xl">open_in_new</span>
+                    Access via SLIMS
+                </a>
             </div>
-</div>
+
+            <div class="space-y-4">
+                <h3 class="font-label text-[10px] tracking-[0.2em] uppercase text-zinc-400 font-extrabold flex items-center gap-2">
+                    <span class="material-symbols-outlined text-lg">subject</span>
+                    Abstract / Description
+                </h3>
+                <div class="bg-zinc-50/50 p-6 md:p-8 rounded-2xl border border-zinc-100 relative overflow-hidden">
+                    <div class="absolute left-0 top-0 bottom-0 w-1 bg-red-600/30"></div>
+                    <p id="book-description" class="text-zinc-600 text-base md:text-lg leading-relaxed text-justify whitespace-pre-line">
+                        -
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer class="bg-zinc-50 border-t border-zinc-200 pt-12 pb-8 mt-10">
+    <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4 text-zinc-400 text-xs">
+        <div class="font-black uppercase tracking-[0.2em]">EduForward Archive</div>
+        <div>© 2026 All rights reserved.</div>
+    </div>
 </footer>
 
-    <script src="script.js"></script>
+<script src="script.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const urlParams = new URLSearchParams(window.location.search);
+        const targetId = urlParams.get('id');
 
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const urlParams = new URLSearchParams(window.location.search);
-            const targetId = urlParams.get('id');
+        if (typeof books !== 'undefined' && targetId) {
+            const book = books.find(item => item.id == targetId);
 
-            if (typeof books !== 'undefined' && targetId) {
-                const book = books.find(item => item.id == targetId);
+            if (book) {
+                document.getElementById('book-cover').src = book.img || "https://via.placeholder.com/400x600?text=No+Cover";
+                document.getElementById('book-title').textContent = book.title;
+                document.title = `${book.title} - EduForward Archive`; 
+                document.getElementById('book-author').textContent = `By ${book.author}`;
+                document.getElementById('book-type-badge').textContent = book.type;
+                document.getElementById('book-year-badge').textContent = book.year;
+                document.getElementById('book-description').textContent = book.desc;
 
-                if (book) {
-                    // ภาพหน้าปก
-                    document.getElementById('book-cover').src = book.img ? book.img : "https://via.placeholder.com/400x600?text=No+Cover";
-                    
-                    // ข้อมูลหลัก
-                    document.getElementById('book-title').textContent = book.title;
-                    document.title = `${book.title} - EduForward Archive`; 
-                    document.getElementById('book-author').textContent = `By ${book.author}`;
-                    
-                    // ป้าย Badges
-                    document.getElementById('book-type-badge').textContent = book.type;
-                    document.getElementById('book-year-badge').textContent = book.year;
-
-                    // รายละเอียด
-                    document.getElementById('book-description').textContent = book.desc;
-
-                    // คีย์เวิร์ด
-                    const keywordsContainer = document.getElementById('book-keywords');
-                    if (book.keywords && book.keywords.length > 0) {
-                        keywordsContainer.innerHTML = book.keywords.map(kw => 
-                            `<span class="bg-white border border-outline-variant/40 text-primary shadow-sm px-4 py-1.5 rounded-full text-xs font-['Public_Sans'] tracking-wider hover:bg-primary hover:text-white transition-colors duration-300 cursor-default">${kw}</span>`
-                        ).join('');
-                    } else {
-                        keywordsContainer.innerHTML = `<span class="text-sm text-gray-400 italic">No keywords provided.</span>`;
-                    }
-
-                    // ลิงก์
-                    const slimsLink = document.getElementById('book-slims-link');
-                    if (book.link && book.link !== "") {
-                        slimsLink.href = book.link;
-                    } else {
-                        slimsLink.style.display = 'none'; 
-                    }
-
+                const keywordsContainer = document.getElementById('book-keywords');
+                if (book.keywords && book.keywords.length > 0) {
+                    keywordsContainer.innerHTML = book.keywords.map(kw => 
+                        `<span class="bg-white border border-zinc-200 text-zinc-500 px-3 py-1 rounded-md text-[10px] font-bold uppercase tracking-wider hover:border-red-600 hover:text-red-600 transition-colors duration-300 cursor-default">
+                            ${kw}
+                        </span>`
+                    ).join('');
                 } else {
-                    document.getElementById('book-title').textContent = "ไม่พบข้อมูลเอกสาร";
-                    document.getElementById('book-description').textContent = "ไม่พบรหัสเอกสารนี้ในฐานข้อมูล โปรดกลับไปค้นหาใหม่";
-                    document.getElementById('book-slims-link').style.display = 'none';
-                    document.getElementById('book-author').textContent = "-";
-                    document.getElementById('book-type-badge').style.display = 'none';
-                    document.getElementById('book-year-badge').style.display = 'none';
+                    keywordsContainer.innerHTML = '<span class="text-zinc-300 text-xs italic">No keywords</span>';
                 }
-            } else {
-                document.getElementById('book-title').textContent = "เกิดข้อผิดพลาด";
-                document.getElementById('book-description').textContent = "ไม่พบรหัสอ้างอิงของเอกสาร กรุณากดเข้าเอกสารจากหน้าระบบค้นหา";
-                document.getElementById('book-slims-link').style.display = 'none';
-                document.getElementById('book-author').textContent = "-";
-                document.getElementById('book-type-badge').style.display = 'none';
-                document.getElementById('book-year-badge').style.display = 'none';
+
+                const slimsLink = document.getElementById('book-slims-link');
+                if (book.link) {
+                    slimsLink.href = book.link;
+                } else {
+                    slimsLink.parentElement.style.display = 'none';
+                }
             }
-        });
-    </script>
+        }
+    });
+</script>
+
 </body>
 </html>
