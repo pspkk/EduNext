@@ -83,9 +83,10 @@
             
             <div class="border-b border-zinc-100 pb-6">
                 <div class="flex items-center gap-2 mb-4">
-                    <span id="book-type-badge" class="px-2 py-0.5 bg-zinc-100 text-zinc-600 text-[10px] rounded font-bold uppercase">Type</span>
-                    <span id="book-category" class="px-2 py-0.5 bg-zinc-100 text-zinc-600 text-[10px] rounded font-bold uppercase">Category</span>
+                    <span id="book-type-badge" class="px-2 py-0.5 bg-zinc-100 text-zinc-700 text-[10px] rounded font-bold uppercase">Type</span>
                     <span id="book-year-badge" class="px-2 py-0.5 border border-zinc-200 text-zinc-400 text-[10px] rounded font-bold uppercase">Year</span>
+    
+                <div id="book-category-container" class="flex flex-wrap gap-2"></div>
                 </div>
 
                 <h1 id="book-title" class="text-3xl lg:text-4xl font-extrabold text-zinc-900 tracking-tight leading-tight mb-4">
@@ -153,8 +154,21 @@
                 document.getElementById('book-author').textContent = `By ${book.author}`;
                 document.getElementById('book-type-badge').textContent = book.type;
                 document.getElementById('book-year-badge').textContent = book.year;
-                document.getElementById('book-category').textContent = book.category;
                 document.getElementById('book-description').textContent = book.desc;
+                // ค้นหาตำแหน่งที่จะวาง Category
+                const categoryContainer = document.getElementById('book-category-container');
+
+                if (book.category && Array.isArray(book.category)) {
+                    // กรณีข้อมูล category เป็น Array (มีหลายอัน)
+                    categoryContainer.innerHTML = book.category.map(cat => 
+                        `<span class="px-2 py-0.5 bg-red-50 text-red-600 text-[10px] rounded font-bold uppercase border border-red-100">
+                            ${cat}
+                        </span>`
+                    ).join('');
+                } else if (book.category) {
+                // กรณีมีอันเดียว (เป็น String)
+                    categoryContainer.innerHTML = `<span class="px-2 py-0.5 bg-red-50 text-red-600 text-[10px] rounded font-bold uppercase border border-red-100">${book.category}</span>`;
+                }
 
                 const keywordsContainer = document.getElementById('book-keywords');
                 if (book.keywords && book.keywords.length > 0) {
