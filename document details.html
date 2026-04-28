@@ -84,6 +84,7 @@
             <div class="border-b border-zinc-100 pb-6">
                 <div class="flex items-center gap-2 mb-4">
                     <span id="book-type-badge" class="px-2 py-0.5 bg-zinc-100 text-zinc-600 text-[10px] rounded font-bold uppercase">Type</span>
+                    <span id="book-category" class="px-2 py-0.5 bg-zinc-100 text-zinc-600 text-[10px] rounded font-bold uppercase">Category</span>
                     <span id="book-year-badge" class="px-2 py-0.5 border border-zinc-200 text-zinc-400 text-[10px] rounded font-bold uppercase">Year</span>
                 </div>
 
@@ -152,6 +153,7 @@
                 document.getElementById('book-author').textContent = `By ${book.author}`;
                 document.getElementById('book-type-badge').textContent = book.type;
                 document.getElementById('book-year-badge').textContent = book.year;
+                document.getElementById('book-category').textContent = book.category;
                 document.getElementById('book-description').textContent = book.desc;
 
                 const keywordsContainer = document.getElementById('book-keywords');
